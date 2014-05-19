@@ -2038,3 +2038,118 @@ Stack trace:
 REQUEST_URI=/index.php/admin/user/update/id
 HTTP_REFERER=http://diplom.com/index.php/admin/user
 ---
+2014/05/19 07:30:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "admin/user".' in Z:\home\diplom.com\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\diplom.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/user')
+#1 Z:\home\diplom.com\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 Z:\home\diplom.com\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/admin/user
+HTTP_REFERER=http://diplom.com/index.php/admin
+---
+2014/05/19 07:34:49 [error] [exception.CException] exception 'CException' with message 'Контроллер UserController не может найти представление "index".' in Z:\home\diplom.com\www\framework\web\CController.php:878
+Stack trace:
+#0 Z:\home\diplom.com\www\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#1 Z:\home\diplom.com\www\protected\modules\admin\controllers\UserController.php(128): CController->render('index', Array)
+#2 Z:\home\diplom.com\www\framework\web\actions\CInlineAction.php(49): UserController->actionIndex()
+#3 Z:\home\diplom.com\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 Z:\home\diplom.com\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 Z:\home\diplom.com\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 Z:\home\diplom.com\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 Z:\home\diplom.com\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 Z:\home\diplom.com\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 Z:\home\diplom.com\www\framework\web\CController.php(291): CFilterChain->run()
+#10 Z:\home\diplom.com\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 Z:\home\diplom.com\www\framework\web\CWebApplication.php(282): CController->run('')
+#12 Z:\home\diplom.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/user')
+#13 Z:\home\diplom.com\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 Z:\home\diplom.com\www\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/index.php/admin/user
+HTTP_REFERER=http://diplom.com/index.php/gii/crud/index
+---
+2014/05/19 07:48:54 [error] [php] Cannot modify header information - headers already sent by (output started at Z:\home\diplom.com\www\framework\web\CController.php:793) (Z:\home\diplom.com\www\framework\web\CHttpRequest.php:803)
+Stack trace:
+#0 Z:\home\diplom.com\www\protected\modules\admin\controllers\UserController.php(65): UserController->redirect()
+#1 unknown(0): UserController->actionPassword()
+#2 Z:\home\diplom.com\www\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#3 Z:\home\diplom.com\www\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#4 Z:\home\diplom.com\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 Z:\home\diplom.com\www\framework\web\filters\CFilterChain.php(133): UserController->runAction()
+#6 Z:\home\diplom.com\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 Z:\home\diplom.com\www\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 Z:\home\diplom.com\www\framework\web\filters\CInlineFilter.php(58): UserController->filterAccessControl()
+#9 Z:\home\diplom.com\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 Z:\home\diplom.com\www\framework\web\CController.php(291): CFilterChain->run()
+#11 Z:\home\diplom.com\www\framework\web\CController.php(265): UserController->runActionWithFilters()
+#12 Z:\home\diplom.com\www\framework\web\CWebApplication.php(282): UserController->run()
+#13 Z:\home\diplom.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 Z:\home\diplom.com\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 Z:\home\diplom.com\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/admin/user/password/id/1
+in Z:\home\diplom.com\www\protected\modules\admin\controllers\UserController.php (65)
+in Z:\home\diplom.com\www\index.php (13)
+2014/05/19 07:49:03 [error] [php] Cannot modify header information - headers already sent by (output started at Z:\home\diplom.com\www\framework\web\CController.php:793) (Z:\home\diplom.com\www\framework\web\CHttpRequest.php:803)
+Stack trace:
+#0 Z:\home\diplom.com\www\protected\modules\admin\controllers\UserController.php(65): UserController->redirect()
+#1 unknown(0): UserController->actionPassword()
+#2 Z:\home\diplom.com\www\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#3 Z:\home\diplom.com\www\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#4 Z:\home\diplom.com\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 Z:\home\diplom.com\www\framework\web\filters\CFilterChain.php(133): UserController->runAction()
+#6 Z:\home\diplom.com\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 Z:\home\diplom.com\www\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 Z:\home\diplom.com\www\framework\web\filters\CInlineFilter.php(58): UserController->filterAccessControl()
+#9 Z:\home\diplom.com\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 Z:\home\diplom.com\www\framework\web\CController.php(291): CFilterChain->run()
+#11 Z:\home\diplom.com\www\framework\web\CController.php(265): UserController->runActionWithFilters()
+#12 Z:\home\diplom.com\www\framework\web\CWebApplication.php(282): UserController->run()
+#13 Z:\home\diplom.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 Z:\home\diplom.com\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 Z:\home\diplom.com\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/admin/user/password/id/1
+in Z:\home\diplom.com\www\protected\modules\admin\controllers\UserController.php (65)
+in Z:\home\diplom.com\www\index.php (13)
+2014/05/19 08:13:40 [error] [exception.CException] exception 'CException' with message 'Контроллер GoodsController не может найти представление "index".' in Z:\home\diplom.com\www\framework\web\CController.php:878
+Stack trace:
+#0 Z:\home\diplom.com\www\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#1 Z:\home\diplom.com\www\protected\modules\admin\controllers\GoodsController.php(128): CController->render('index', Array)
+#2 Z:\home\diplom.com\www\framework\web\actions\CInlineAction.php(49): GoodsController->actionIndex()
+#3 Z:\home\diplom.com\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 Z:\home\diplom.com\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 Z:\home\diplom.com\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 Z:\home\diplom.com\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 Z:\home\diplom.com\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 Z:\home\diplom.com\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 Z:\home\diplom.com\www\framework\web\CController.php(291): CFilterChain->run()
+#10 Z:\home\diplom.com\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 Z:\home\diplom.com\www\framework\web\CWebApplication.php(282): CController->run('')
+#12 Z:\home\diplom.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/goods')
+#13 Z:\home\diplom.com\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 Z:\home\diplom.com\www\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/index.php/admin/goods
+HTTP_REFERER=http://diplom.com/index.php/admin
+---
+2014/05/19 12:20:49 [error] [php] include(Goods.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (Z:\home\diplom.com\www\framework\YiiBase.php:427)
+Stack trace:
+#0 Z:\home\diplom.com\www\framework\db\ar\CActiveRecord.php(395): spl_autoload_call()
+#1 Z:\home\diplom.com\www\framework\web\CActiveDataProvider.php(165): model()
+#2 Z:\home\diplom.com\www\framework\web\CActiveDataProvider.php(87): CActiveDataProvider->getModel()
+#3 Z:\home\diplom.com\www\protected\modules\admin\controllers\GoodsController.php(125): CActiveDataProvider->__construct()
+#4 Z:\home\diplom.com\www\framework\web\actions\CInlineAction.php(49): GoodsController->actionIndex()
+#5 Z:\home\diplom.com\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 Z:\home\diplom.com\www\framework\web\filters\CFilterChain.php(133): GoodsController->runAction()
+#7 Z:\home\diplom.com\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 Z:\home\diplom.com\www\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#9 Z:\home\diplom.com\www\framework\web\filters\CInlineFilter.php(58): GoodsController->filterAccessControl()
+#10 Z:\home\diplom.com\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#11 Z:\home\diplom.com\www\framework\web\CController.php(291): CFilterChain->run()
+#12 Z:\home\diplom.com\www\framework\web\CController.php(265): GoodsController->runActionWithFilters()
+#13 Z:\home\diplom.com\www\framework\web\CWebApplication.php(282): GoodsController->run()
+#14 Z:\home\diplom.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#15 Z:\home\diplom.com\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#16 Z:\home\diplom.com\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/admin/goods
+in Z:\home\diplom.com\www\protected\modules\admin\controllers\GoodsController.php (125)
+in Z:\home\diplom.com\www\index.php (13)

@@ -1,12 +1,12 @@
 <?php
 
-class UserController extends Controller
+class GoodsController extends Controller
 {
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
 	 */
-	public $layout='/layouts/column2';
+	public $layout='//layouts/column2';
 
 	/**
 	 * @return array action filters
@@ -28,7 +28,7 @@ class UserController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view','password'),
+				'actions'=>array('index','view'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -56,15 +56,34 @@ class UserController extends Controller
 		));
 	}
 
-        public function actionPassword($id)
+	/**
+	 * Creates a new model.
+	 * If creation is successful, the browser will be redirected to the 'view' page.
+	 */
+	public function actionCreate()
 	{
-		$model = $this->loadModel($id);
-                $model -> password = $_POST['password'];
-                $model->save();
-                //$this->redirect(array('view','id'=>$model->id));
-                $this->render('password');
+		$model=new Goods;
+
+		// Uncomment the following line if AJAX validation is needed
+		// $this->performAjaxValidation($model);
+
+		if(isset($_POST['Goods']))
+		{
+			$model->attributes=$_POST['Goods'];
+			if($model->save())
+				$this->redirect(array('view','id'=>$model->id));
+		}
+
+		$this->render('create',array(
+			'model'=>$model,
+		));
 	}
 
+	/**
+	 * Updates a particular model.
+	 * If update is successful, the browser will be redirected to the 'view' page.
+	 * @param integer $id the ID of the model to be updated
+	 */
 	public function actionUpdate($id)
 	{
 		$model=$this->loadModel($id);
@@ -72,9 +91,9 @@ class UserController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['User']))
+		if(isset($_POST['Goods']))
 		{
-			$model->attributes=$_POST['User'];
+			$model->attributes=$_POST['Goods'];
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
@@ -95,20 +114,31 @@ class UserController extends Controller
 
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if(!isset($_GET['ajax']))
-			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('index'));
+			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
+	}
+
+	/**
+	 * Lists all models.
+	 */
+	public function actionIndex()
+	{
+		$dataProvider=new CActiveDataProvider('Goods');
+		$this->render('index',array(
+			'dataProvider'=>$dataProvider,
+		));
 	}
 
 	/**
 	 * Manages all models.
 	 */
-	public function actionIndex()
+	public function actionAdmin()
 	{
-		$model=new User('search');
+		$model=new Goods('search');
 		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['User']))
-			$model->attributes=$_GET['User'];
+		if(isset($_GET['Goods']))
+			$model->attributes=$_GET['Goods'];
 
-		$this->render('index',array(
+		$this->render('admin',array(
 			'model'=>$model,
 		));
 	}
@@ -117,12 +147,12 @@ class UserController extends Controller
 	 * Returns the data model based on the primary key given in the GET variable.
 	 * If the data model is not found, an HTTP exception will be raised.
 	 * @param integer $id the ID of the model to be loaded
-	 * @return User the loaded model
+	 * @return Goods the loaded model
 	 * @throws CHttpException
 	 */
 	public function loadModel($id)
 	{
-		$model=User::model()->findByPk($id);
+		$model=Goods::model()->findByPk($id);
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;
@@ -130,11 +160,11 @@ class UserController extends Controller
 
 	/**
 	 * Performs the AJAX validation.
-	 * @param User $model the model to be validated
+	 * @param Goods $model the model to be validated
 	 */
 	protected function performAjaxValidation($model)
 	{
-		if(isset($_POST['ajax']) && $_POST['ajax']==='user-form')
+		if(isset($_POST['ajax']) && $_POST['ajax']==='goods-form')
 		{
 			echo CActiveForm::validate($model);
 			Yii::app()->end();

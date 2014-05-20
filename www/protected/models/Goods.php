@@ -6,11 +6,11 @@
  * The followings are the available columns in table '{{goods}}':
  * @property integer $id
  * @property string $name
- * @property string $text
  * @property string $article
- * @property string $photo
- * @property integer $status
+ * @property string $text
+ * @property integer $data
  * @property double $pay
+ * @property integer $status
  */
 class Goods extends CActiveRecord
 {
@@ -32,11 +32,10 @@ class Goods extends CActiveRecord
 		return array(
 			array('status', 'numerical', 'integerOnly'=>true),
 			array('pay', 'numerical'),
-			array('name', 'length', 'max'=>20),
-			array('text, article, photo', 'length', 'max'=>255),
+			array('name, article, text', 'length', 'max'=>255),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, name, text, article, photo, status, pay', 'safe', 'on'=>'search'),
+			array('id, name, article, text, data, pay, status', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -58,12 +57,12 @@ class Goods extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'name' => 'Name',
-			'text' => 'Text',
-			'article' => 'Article',
-			'photo' => 'Photo',
-			'status' => 'Status',
-			'pay' => 'Pay',
+			'name' => 'Назва',
+			'article' => 'Артикул',
+			'text' => 'Опис',
+			'data' => 'Дата',
+			'pay' => 'Ціна',
+			'status' => 'Статус',
 		);
 	}
 
@@ -87,11 +86,11 @@ class Goods extends CActiveRecord
 
 		$criteria->compare('id',$this->id);
 		$criteria->compare('name',$this->name,true);
-		$criteria->compare('text',$this->text,true);
 		$criteria->compare('article',$this->article,true);
-		$criteria->compare('photo',$this->photo,true);
-		$criteria->compare('status',$this->status);
+		$criteria->compare('text',$this->text,true);
+		$criteria->compare('data',$this->data);
 		$criteria->compare('pay',$this->pay);
+		$criteria->compare('status',$this->status);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -108,4 +107,13 @@ class Goods extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+    
+    public function beforeSave()
+	{
+        if($this->isNewRecord)
+            $this->data = time();
+		return parent::beforeSave();
+	}
+    
+    
 }

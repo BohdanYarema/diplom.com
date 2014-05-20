@@ -2,17 +2,12 @@
 /* @var $this GoodsController */
 /* @var $model Goods */
 
-$this->breadcrumbs=array(
-	'Goods'=>array('index'),
-	'Create',
-);
 
 $this->menu=array(
-	array('label'=>'List Goods', 'url'=>array('index')),
-	array('label'=>'Manage Goods', 'url'=>array('admin')),
+	array('label'=>'Каталог товарів', 'url'=>array('index')),
 );
 ?>
 
-<h1>Create Goods</h1>
+<h1>Додати товар</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

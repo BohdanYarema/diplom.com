@@ -21,14 +21,8 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'name'); ?>
-		<?php echo $form->textField($model,'name',array('size'=>20,'maxlength'=>20)); ?>
+		<?php echo $form->textField($model,'name',array('size'=>60,'maxlength'=>255)); ?>
 		<?php echo $form->error($model,'name'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'text'); ?>
-		<?php echo $form->textField($model,'text',array('size'=>60,'maxlength'=>255)); ?>
-		<?php echo $form->error($model,'text'); ?>
 	</div>
 
 	<div class="row">
@@ -38,15 +32,14 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'photo'); ?>
-		<?php echo $form->textField($model,'photo',array('size'=>60,'maxlength'=>255)); ?>
-		<?php echo $form->error($model,'photo'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'status'); ?>
-		<?php echo $form->textField($model,'status'); ?>
-		<?php echo $form->error($model,'status'); ?>
+		<?php echo $form->labelEx($model,'text'); ?>
+		<?php $this->widget('application.extensions.ckeditor.CKEditor', array( 
+        'model'=>$model, 
+        'attribute'=>'text', 
+        'language'=>'ru', 
+        'editorTemplate'=>'full', )); 
+        ?>
+		<?php echo $form->error($model,'text'); ?>
 	</div>
 
 	<div class="row">
@@ -55,8 +48,14 @@
 		<?php echo $form->error($model,'pay'); ?>
 	</div>
 
+	<div class="row">
+		<?php echo $form->labelEx($model,'status'); ?>
+		<?php echo $form->dropDownList($model,'status', array(0=>"нема в наявності", 1=>"є в наявності")); ?>
+		<?php echo $form->error($model,'status'); ?>
+	</div>
+
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Додати' : 'Зберегти'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

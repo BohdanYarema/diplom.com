@@ -18,12 +18,7 @@
 
 	<div class="row">
 		<?php echo $form->label($model,'name'); ?>
-		<?php echo $form->textField($model,'name',array('size'=>20,'maxlength'=>20)); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'text'); ?>
-		<?php echo $form->textField($model,'text',array('size'=>60,'maxlength'=>255)); ?>
+		<?php echo $form->textField($model,'name',array('size'=>60,'maxlength'=>255)); ?>
 	</div>
 
 	<div class="row">
@@ -32,13 +27,13 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'photo'); ?>
-		<?php echo $form->textField($model,'photo',array('size'=>60,'maxlength'=>255)); ?>
+		<?php echo $form->label($model,'text'); ?>
+		<?php echo $form->textField($model,'text',array('size'=>60,'maxlength'=>255)); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'status'); ?>
-		<?php echo $form->textField($model,'status'); ?>
+		<?php echo $form->label($model,'data'); ?>
+		<?php echo $form->textField($model,'data'); ?>
 	</div>
 
 	<div class="row">
@@ -46,8 +41,13 @@
 		<?php echo $form->textField($model,'pay'); ?>
 	</div>
 
+	<div class="row">
+		<?php echo $form->label($model,'status'); ?>
+		<?php echo $form->textField($model,'status'); ?>
+	</div>
+
 	<div class="row buttons">
-		<?php echo CHtml::submitButton('Search'); ?>
+		<?php echo CHtml::submitButton('Пошук'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

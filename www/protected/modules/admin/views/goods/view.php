@@ -2,31 +2,26 @@
 /* @var $this GoodsController */
 /* @var $model Goods */
 
-$this->breadcrumbs=array(
-	'Goods'=>array('index'),
-	$model->name,
-);
 
 $this->menu=array(
-	array('label'=>'List Goods', 'url'=>array('index')),
-	array('label'=>'Create Goods', 'url'=>array('create')),
-	array('label'=>'Update Goods', 'url'=>array('update', 'id'=>$model->id)),
-	array('label'=>'Delete Goods', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage Goods', 'url'=>array('admin')),
+	array('label'=>'Каталог товарів', 'url'=>array('index')),
+	array('label'=>'Додати новий', 'url'=>array('create')),
+	array('label'=>'Оновити товар', 'url'=>array('update', 'id'=>$model->id)),
+	array('label'=>'Видалити товар', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Ви впевнені?')),
 );
 ?>
 
-<h1>View Goods #<?php echo $model->id; ?></h1>
+<h1>Перегляд товару #<?php echo $model->id; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
 	'attributes'=>array(
 		'id',
 		'name',
-		'text',
 		'article',
-		'photo',
-		'status',
+		'text',
+		'data',
 		'pay',
+		'status',
 	),
 )); ?>

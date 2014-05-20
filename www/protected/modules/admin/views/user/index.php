@@ -2,12 +2,6 @@
 /* @var $this UserController */
 /* @var $model User */
 
-$this->menu=array(
-	//array('label'=>'Список користувачів', 'url'=>array('index')),
-	//array('label'=>'Перегляд', 'url'=>array('view', 'id'=>$model->id)),
-        //array('label'=>'Редагувати користувача', 'url'=>array('update', 'id'=>$model->id)),
-    );
-
 
 Yii::app()->clientScript->registerScript('search', "
 $('.search-button').click(function(){
@@ -23,7 +17,8 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Журнал користувачів</h1>
+<h1>Список користувачів</h1>
+
 
 <?php echo CHtml::link('Розширений пошук','#',array('class'=>'search-button')); ?>
 <div class="search-form" style="display:none">
@@ -38,17 +33,13 @@ $('.search-form form').submit(function(){
 	'filter'=>$model,
 	'columns'=>array(
 		'id',
-		'name',
-		'second_name',
+		'username',
+		//'second_name',
 		'email',
-		'password',
-		'tellephone',
-		'adress',
-		'role' => array (
-                    'name' => 'role',
-                    'value' => '($data -> role==1)?"User":"Admin"',
-                    'filter' => array (2=>"Admin",1=>"User"),
-                ),
+		//'password',
+		//'tellephone',
+		//'adress',
+		//'role',
 		array(
 			'class'=>'CButtonColumn',
 		),

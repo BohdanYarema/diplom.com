@@ -5,7 +5,7 @@
  *
  * The followings are the available columns in table '{{user}}':
  * @property integer $id
- * @property string $name
+ * @property string $username
  * @property string $second_name
  * @property string $email
  * @property string $password
@@ -15,6 +15,9 @@
  */
 class User extends CActiveRecord
 {
+    const ROLE_ADMIN = 'administrator';
+    const ROLE_USER = 'user';
+    const ROLE_BANNED = 'banned';
 	/**
 	 * @return string the associated database table name
 	 */
@@ -32,10 +35,10 @@ class User extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('role', 'numerical', 'integerOnly'=>true),
-			array('name, second_name, email, password, tellephone, adress', 'length', 'max'=>255),
+			array('username, second_name, email, password, tellephone, adress', 'length', 'max'=>255),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, name, second_name, email, password, tellephone, adress, role', 'safe', 'on'=>'search'),
+			array('id, username, second_name, email, password, tellephone, adress, role', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -57,7 +60,7 @@ class User extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'name' => 'Імя',
+			'username' => 'Імя',
 			'second_name' => 'Фамілія',
 			'email' => 'E-mail',
 			'password' => 'Пароль',
@@ -86,7 +89,7 @@ class User extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
-		$criteria->compare('name',$this->name,true);
+		$criteria->compare('username',$this->username,true);
 		$criteria->compare('second_name',$this->second_name,true);
 		$criteria->compare('email',$this->email,true);
 		$criteria->compare('password',$this->password,true);
@@ -109,9 +112,10 @@ class User extends CActiveRecord
 	{
 		return parent::model($className);
 	}
-        public function  beforeSave() {
+    
+    public function  beforeSave() {
 
             $this->password = md5($this->password);
             return parent::beforeSave();
-        }
+    }
 }

@@ -38,7 +38,10 @@ class User extends CActiveRecord
 		return array(
             array('password, email, username','required'),
             array('email','email'),
-			array('role', 'numerical', 'integerOnly'=>true),
+            array('username','unique'),
+			array('email','unique'),
+            array('username','match','pattern'=>'/^([A-Za-z0-9 ]+)$/u','message'=>'Доспустимі символи (A-Z,a-z,0-9)'),
+            array('role', 'numerical', 'integerOnly'=>true),
 			array('username, second_name, email, password, tellephone, adress', 'length', 'max'=>255),
              array('verifyCode', 'captcha', 'allowEmpty'=>!CCaptcha::checkRequirements(), 'on' => 'registration'),
 			// The following rule is used by search().

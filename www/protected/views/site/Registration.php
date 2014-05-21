@@ -49,7 +49,7 @@
 	<?php endif; ?>
 
     <div class="row buttons"> 
-        <?php echo CHtml::submitButton($model->isNewRecord ? 'Registrationale' : 'Save'); ?>
+        <?php echo CHtml::submitButton($model->isNewRecord ? 'Зареєструватись' : 'Save'); ?>
     </div> 
 
 <?php $this->endWidget(); ?>

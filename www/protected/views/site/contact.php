@@ -5,7 +5,7 @@
 
 ?>
 
-<h1>Contact Us</h1>
+<h1>Контактна форма</h1>
 
 <?php if(Yii::app()->user->hasFlash('contact')): ?>
 
@@ -16,7 +16,7 @@
 <?php else: ?>
 
 <p>
-If you have business inquiries or other questions, please fill out the following form to contact us. Thank you.
+Якщо у вас є до нас питання, зв'яжіться з нами за допомогою цієї форми. Дякуємо.
 </p>
 
 <div class="form">
@@ -29,7 +29,7 @@ If you have business inquiries or other questions, please fill out the following
 	),
 )); ?>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
+	<p class="note">Поля з <span class="required">*</span> обов'язкові.</p>
 
 	<?php echo $form->errorSummary($model); ?>
 
@@ -64,14 +64,14 @@ If you have business inquiries or other questions, please fill out the following
 		<?php $this->widget('CCaptcha'); ?>
 		<?php echo $form->textField($model,'verifyCode'); ?>
 		</div>
-		<div class="hint">Please enter the letters as they are shown in the image above.
-		<br/>Letters are not case-sensitive.</div>
+		<div class="hint">Будь-ласка введіть літери які ви бачите на картинці.
+		<br/>Літери не чутливі до регістру.</div>
 		<?php echo $form->error($model,'verifyCode'); ?>
 	</div>
 	<?php endif; ?>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton('Submit'); ?>
+		<?php echo CHtml::submitButton('Конопочка "Відправити"'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

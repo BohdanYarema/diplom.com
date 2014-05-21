@@ -18,6 +18,8 @@ class User extends CActiveRecord
     const ROLE_ADMIN = 'administrator';
     const ROLE_USER = 'user';
     const ROLE_BANNED = 'banned';
+    public $verifyCode;
+    
 	/**
 	 * @return string the associated database table name
 	 */
@@ -34,8 +36,11 @@ class User extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
+            array('password, email, username','required'),
+            array('email','email'),
 			array('role', 'numerical', 'integerOnly'=>true),
 			array('username, second_name, email, password, tellephone, adress', 'length', 'max'=>255),
+             array('verifyCode', 'captcha', 'allowEmpty'=>!CCaptcha::checkRequirements(), 'on' => 'registration'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('id, username, second_name, email, password, tellephone, adress, role', 'safe', 'on'=>'search'),
@@ -113,9 +118,13 @@ class User extends CActiveRecord
 		return parent::model($className);
 	}
     
-    public function  beforeSave() {
-
-            $this->password = md5($this->password);
-            return parent::beforeSave();
-    }
+    public function beforeSave()
+	{
+	   if ($this->isNewRecord)
+        //$this->Created = time();
+        if ($this->isNewRecord)
+        $this->role = 1;
+	   $this->password = md5('Us3r=>'.$this->password);
+		return parent::beforeSave();
+	} 
 }

@@ -32,6 +32,8 @@
 				array('label'=>'Домашня сторіночка', 'url'=>array('/site/index')),
 				array('label'=>'Про нас', 'url'=>array('/site/page', 'view'=>'about')),
 				array('label'=>'Контактна форма зв\'язку', 'url'=>array('/site/contact')),
+                array('label'=>'Товари', 'url'=>array('/goods'), 'visible'=>!Yii::app()->user->isGuest, ),
+                array('label'=>'Послуги', 'url'=>array('/work'), 'visible'=>!Yii::app()->user->isGuest, ),
                 array('label'=>'Адміночка рідненька', 'url'=>array('/admin'), 'visible'=>!Yii::app()->user->isGuest, ),
                 array('label'=>'Реєстрація', 'url'=>array('/site/Registration'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Уввікмніть', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),

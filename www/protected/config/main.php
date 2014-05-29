@@ -14,7 +14,6 @@ return array(
 
 	// preloading 'log' component
 	'preload'=>array('log'),
-
 	// autoloading model and component classes
 	'import'=>array(
 		'application.models.*',
@@ -101,6 +100,6 @@ return array(
 	// using Yii::app()->params['paramName']
 	'params'=>array(
 		// this is used in contact page
-		'adminEmail'=>'bohdanyarema1992@gmail.com',
+		'adminEmail'=>'Bravo_9@bigmir.net',
 	),
 );

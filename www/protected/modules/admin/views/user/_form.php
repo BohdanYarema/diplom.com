@@ -38,12 +38,6 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'password'); ?>
-		<?php echo $form->passwordField($model,'password',array('size'=>60,'maxlength'=>255)); ?>
-		<?php echo $form->error($model,'password'); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->labelEx($model,'tellephone'); ?>
 		<?php echo $form->textField($model,'tellephone',array('size'=>60,'maxlength'=>255)); ?>
 		<?php echo $form->error($model,'tellephone'); ?>
@@ -55,11 +49,11 @@
 		<?php echo $form->error($model,'adress'); ?>
 	</div>
 
-	<div class="row">
+<div class="row">
 		<?php echo $form->labelEx($model,'role'); ?>
-		<?php echo $form->textField($model,'role'); ?>
+		<?php echo $form->dropDownList($model,'role', array(1=>"користувач", 2=>"адміністратор")); ?>
 		<?php echo $form->error($model,'role'); ?>
-	</div>
+</div>
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Створити' : 'Зберегти'); ?>

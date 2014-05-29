@@ -44,7 +44,7 @@ class SiteController extends Controller
 		{
 			$model->attributes=$_POST['User'];
 			if($model->save())
-            Yii::app()->user->setFlash('registration','Thank you for registration.');
+            Yii::app()->user->setFlash('Реєстрація','Дякуємо за реєстрацію!!!.');
 				//$this->redirect(array('view','id'=>$model->User_id));
 		}
 
@@ -86,7 +86,7 @@ class SiteController extends Controller
 					"Content-Type: text/plain; charset=UTF-8";
 
 				mail(Yii::app()->params['adminEmail'],$subject,$model->body,$headers);
-				Yii::app()->user->setFlash('contact','Thank you for contacting us. We will respond to you as soon as possible.');
+				Yii::app()->user->setFlash('contact','Дякуємо за відгук.Ми з вами зв\'яжемося як найшвидше.');
 				$this->refresh();
 			}
 		}

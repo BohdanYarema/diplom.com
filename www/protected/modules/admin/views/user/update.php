@@ -6,7 +6,7 @@
 $this->menu=array(
 	array('label'=>'Список користувачів', 'url'=>array('index')),
 	array('label'=>'Перегляд інформації', 'url'=>array('view', 'id'=>$model->id)),
-    array('label'=>'Змінити пароль', 'url'=>array('password', 'id'=>$model->id)),
+    //array('label'=>'Змінити пароль', 'url'=>array('password', 'id'=>$model->id)),
 );
 ?>
 

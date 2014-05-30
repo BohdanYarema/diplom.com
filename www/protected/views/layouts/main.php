@@ -20,28 +20,32 @@
 
 <body>
 
-<div class="container" id="page">
-
-	<div id="header">
-		<div id="logo"><?php echo CHtml::encode(Yii::app()->name); ?></div>
-	</div><!-- header -->
-
-	<div id="mainmenu">
-		<?php $this->widget('zii.widgets.CMenu',array(
-			'items'=>array(
-				array('label'=>'Домашня сторіночка', 'url'=>array('/site/index')),
-				array('label'=>'Про нас', 'url'=>array('/site/page', 'view'=>'about')),
-				array('label'=>'Контактна форма зв\'язку', 'url'=>array('/site/contact')),
+<div class="container" id="page"> 
+    <?php $this->widget('bootstrap.widgets.TbNavbar', array(
+    'type'=>'inverse', // null or 'inverse'
+    'collapse'=>true, // requires bootstrap-responsive.css
+    'items'=>array(
+        array(
+            'class'=>'bootstrap.widgets.TbMenu',
+            'items'=>array(
+                array('label'=>'Головна', 'url'=>array('/site/index')),
+                array('label'=>'Про нас', 'url'=>array('/site/page', 'view'=>'about')),
                 array('label'=>'Товари', 'url'=>array('/goods'), 'visible'=>!Yii::app()->user->isGuest, ),
                 array('label'=>'Послуги', 'url'=>array('/work'), 'visible'=>!Yii::app()->user->isGuest, ),
-                array('label'=>'Адміночка рідненька', 'url'=>array('/admin'), 'visible'=>!Yii::app()->user->isGuest, ),
+                array('label'=>'Контактна форма', 'url'=>array('/site/contact')),
+                array('label'=>'Особистий кабінет', 'url'=>array('/user/view/'.Yii::app()->user->id), 'visible'=>!Yii::app()->user->isGuest, ),
+                array('label'=>'Адмін панель', 'url'=>array('/admin'), 'visible'=>!Yii::app()->user->isGuest, ),
                 array('label'=>'Реєстрація', 'url'=>array('/site/Registration'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Уввікмніть', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Вийти ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
-			),
-		)); ?>
-	</div><!-- mainmenu -->
+            ),
+        ),
+    ),
+)); ?>
 
+    <br />
+    <br />
+    <br />
 	<?php echo $content; ?>
 
 	<div class="clear"></div>

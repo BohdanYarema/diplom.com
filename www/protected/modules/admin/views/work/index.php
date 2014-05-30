@@ -38,7 +38,7 @@ $('.search-form form').submit(function(){
 		'id',
 		'article',
 		'name',
-		'text',
+		//'text',
 		'pay',
 		'status' => array(
             'name' => 'status',

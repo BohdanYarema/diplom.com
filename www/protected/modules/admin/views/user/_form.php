@@ -24,7 +24,13 @@
 		<?php echo $form->textField($model,'username',array('size'=>60,'maxlength'=>255)); ?>
 		<?php echo $form->error($model,'username'); ?>
 	</div>
-
+    
+    <div class="row">
+		<?php echo $form->labelEx($model,'password'); ?>
+		<?php echo $form->passwordField($model,'password',array('size'=>60,'maxlength'=>255)); ?>
+		<?php echo $form->error($model,'password'); ?>
+	</div>
+    
 	<div class="row">
 		<?php echo $form->labelEx($model,'second_name'); ?>
 		<?php echo $form->textField($model,'second_name',array('size'=>60,'maxlength'=>255)); ?>

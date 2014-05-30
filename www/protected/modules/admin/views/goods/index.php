@@ -38,7 +38,7 @@ $('.search-form form').submit(function(){
 		'id',
 		'name',
 		'article',
-		'text',
+		//'text',
 		'data' => array(
             'name' => 'data',
             'value' => 'date("j.m.Y H:h",$data->data)',

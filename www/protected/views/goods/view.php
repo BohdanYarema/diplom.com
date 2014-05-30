@@ -10,15 +10,20 @@ $this->menu=array(
 
 <h1>Перегляд товару <?php echo $model->name; ?></h1>
 
+
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
 	'attributes'=>array(
-		'id',
 		'name',
 		'article',
-		'text',
-		'data',
+		//'data',
 		'pay',
-		'status',
+		//'status',
 	),
 )); ?>
+
+<h1 style="text-align: center;">
+<?php $this->beginWidget('CHtmlPurifier'); ?>
+    <?php echo $model->text; ?>
+<?php $this->endWidget(); ?>
+</h1>

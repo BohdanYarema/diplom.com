@@ -33,18 +33,22 @@ $('.search-form form').submit(function(){
     'filter'=>$model,
     'id'=>'goods-grid',
     'columns'=>array(
-        array('name'=>'name', 'header'=>'name'),
-        array('name'=>'article', 'header'=>'article'),
-        array('name'=>'data', 'header'=>'data','value' => 'date("j.m.Y H:h",$data->data)'),
-        array('name'=>'pay', 'header'=>'pay'),
+        array('name'=>'name', 'header'=>'назва',),
+        array('name'=>'article', 'header'=>'артикул'),
+        array('name'=>'data', 'header'=>'Дата','value' => 'date("j.m.Y H:h",$data->data)'),
+        array('name'=>'pay', 'header'=>'Ціна'),
         array(
         'name'=>'status', 
-        'header'=>'status',
+        'header'=>'статус',
         'value'=>'($data->status==1)?"Є на складі":"Немає на складі"'),
         //'filter'=> array(1=>"Є на складі",0=>"Немає на складі"),
         array(
+            'header'=>'перегляд',
             'class'=>'bootstrap.widgets.TbButtonColumn',
             'htmlOptions'=>array('style'=>'width: 50px'),
+            'htmlOptions'=>array('style'=>'text-align:center'),
+            'updateButtonOptions' => array('style'=>'display:none'),
+            'deleteButtonOptions' => array('style'=>'display:none')
         ),
     ),
 )); ?>

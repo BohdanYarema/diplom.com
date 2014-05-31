@@ -5721,3 +5721,110 @@ Stack trace:
 REQUEST_URI=/index.php/goods
 HTTP_REFERER=http://www.diplom.com/index.php/goods
 ---
+2014/05/30 21:37:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "update".' in Z:\home\diplom.com\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\diplom.com\www\framework\web\CController.php(270): CController->missingAction('update')
+#1 Z:\home\diplom.com\www\framework\web\CWebApplication.php(282): CController->run('update')
+#2 Z:\home\diplom.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('goods/update')
+#3 Z:\home\diplom.com\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 Z:\home\diplom.com\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/goods/update/2
+HTTP_REFERER=http://www.diplom.com/index.php/goods
+---
+2014/05/30 22:00:58 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "TbButtonColumn.name".' in Z:\home\diplom.com\www\framework\base\CComponent.php:173
+Stack trace:
+#0 Z:\home\diplom.com\www\framework\YiiBase.php(220): CComponent->__set('name', '???????????????...')
+#1 Z:\home\diplom.com\www\framework\zii\widgets\grid\CGridView.php(388): YiiBase::createComponent(Array, Object(TbGridView))
+#2 Z:\home\diplom.com\www\protected\extensions\bootstrap\widgets\TbGridView.php(91): CGridView->initColumns()
+#3 Z:\home\diplom.com\www\framework\zii\widgets\grid\CGridView.php(359): TbGridView->initColumns()
+#4 Z:\home\diplom.com\www\protected\extensions\bootstrap\widgets\TbGridView.php(49): CGridView->init()
+#5 Z:\home\diplom.com\www\framework\web\CBaseController.php(147): TbGridView->init()
+#6 Z:\home\diplom.com\www\framework\web\CBaseController.php(172): CBaseController->createWidget('bootstrap.widge...', Array)
+#7 Z:\home\diplom.com\www\protected\views\goods\index.php(55): CBaseController->widget('bootstrap.widge...', Array)
+#8 Z:\home\diplom.com\www\framework\web\CBaseController.php(126): require('Z:\home\diplom....')
+#9 Z:\home\diplom.com\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\diplom....', Array, true)
+#10 Z:\home\diplom.com\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\diplom....', Array, true)
+#11 Z:\home\diplom.com\www\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#12 Z:\home\diplom.com\www\protected\controllers\GoodsController.php(64): CController->render('index', Array)
+#13 Z:\home\diplom.com\www\framework\web\actions\CInlineAction.php(49): GoodsController->actionIndex()
+#14 Z:\home\diplom.com\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#15 Z:\home\diplom.com\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#16 Z:\home\diplom.com\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#17 Z:\home\diplom.com\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#18 Z:\home\diplom.com\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#19 Z:\home\diplom.com\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#20 Z:\home\diplom.com\www\framework\web\CController.php(291): CFilterChain->run()
+#21 Z:\home\diplom.com\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 Z:\home\diplom.com\www\framework\web\CWebApplication.php(282): CController->run('')
+#23 Z:\home\diplom.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('goods')
+#24 Z:\home\diplom.com\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#25 Z:\home\diplom.com\www\index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/index.php/goods
+HTTP_REFERER=http://www.diplom.com/index.php/work
+---
+2014/05/30 22:01:12 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "TbButtonColumn.title".' in Z:\home\diplom.com\www\framework\base\CComponent.php:173
+Stack trace:
+#0 Z:\home\diplom.com\www\framework\YiiBase.php(220): CComponent->__set('title', '???????????????...')
+#1 Z:\home\diplom.com\www\framework\zii\widgets\grid\CGridView.php(388): YiiBase::createComponent(Array, Object(TbGridView))
+#2 Z:\home\diplom.com\www\protected\extensions\bootstrap\widgets\TbGridView.php(91): CGridView->initColumns()
+#3 Z:\home\diplom.com\www\framework\zii\widgets\grid\CGridView.php(359): TbGridView->initColumns()
+#4 Z:\home\diplom.com\www\protected\extensions\bootstrap\widgets\TbGridView.php(49): CGridView->init()
+#5 Z:\home\diplom.com\www\framework\web\CBaseController.php(147): TbGridView->init()
+#6 Z:\home\diplom.com\www\framework\web\CBaseController.php(172): CBaseController->createWidget('bootstrap.widge...', Array)
+#7 Z:\home\diplom.com\www\protected\views\goods\index.php(55): CBaseController->widget('bootstrap.widge...', Array)
+#8 Z:\home\diplom.com\www\framework\web\CBaseController.php(126): require('Z:\home\diplom....')
+#9 Z:\home\diplom.com\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\diplom....', Array, true)
+#10 Z:\home\diplom.com\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\diplom....', Array, true)
+#11 Z:\home\diplom.com\www\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#12 Z:\home\diplom.com\www\protected\controllers\GoodsController.php(64): CController->render('index', Array)
+#13 Z:\home\diplom.com\www\framework\web\actions\CInlineAction.php(49): GoodsController->actionIndex()
+#14 Z:\home\diplom.com\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#15 Z:\home\diplom.com\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#16 Z:\home\diplom.com\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#17 Z:\home\diplom.com\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#18 Z:\home\diplom.com\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#19 Z:\home\diplom.com\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#20 Z:\home\diplom.com\www\framework\web\CController.php(291): CFilterChain->run()
+#21 Z:\home\diplom.com\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 Z:\home\diplom.com\www\framework\web\CWebApplication.php(282): CController->run('')
+#23 Z:\home\diplom.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('goods')
+#24 Z:\home\diplom.com\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#25 Z:\home\diplom.com\www\index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/index.php/goods
+HTTP_REFERER=http://www.diplom.com/index.php/work
+---
+2014/05/30 22:01:14 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "TbButtonColumn.title".' in Z:\home\diplom.com\www\framework\base\CComponent.php:173
+Stack trace:
+#0 Z:\home\diplom.com\www\framework\YiiBase.php(220): CComponent->__set('title', '???????????????...')
+#1 Z:\home\diplom.com\www\framework\zii\widgets\grid\CGridView.php(388): YiiBase::createComponent(Array, Object(TbGridView))
+#2 Z:\home\diplom.com\www\protected\extensions\bootstrap\widgets\TbGridView.php(91): CGridView->initColumns()
+#3 Z:\home\diplom.com\www\framework\zii\widgets\grid\CGridView.php(359): TbGridView->initColumns()
+#4 Z:\home\diplom.com\www\protected\extensions\bootstrap\widgets\TbGridView.php(49): CGridView->init()
+#5 Z:\home\diplom.com\www\framework\web\CBaseController.php(147): TbGridView->init()
+#6 Z:\home\diplom.com\www\framework\web\CBaseController.php(172): CBaseController->createWidget('bootstrap.widge...', Array)
+#7 Z:\home\diplom.com\www\protected\views\goods\index.php(55): CBaseController->widget('bootstrap.widge...', Array)
+#8 Z:\home\diplom.com\www\framework\web\CBaseController.php(126): require('Z:\home\diplom....')
+#9 Z:\home\diplom.com\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\diplom....', Array, true)
+#10 Z:\home\diplom.com\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\diplom....', Array, true)
+#11 Z:\home\diplom.com\www\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#12 Z:\home\diplom.com\www\protected\controllers\GoodsController.php(64): CController->render('index', Array)
+#13 Z:\home\diplom.com\www\framework\web\actions\CInlineAction.php(49): GoodsController->actionIndex()
+#14 Z:\home\diplom.com\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#15 Z:\home\diplom.com\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#16 Z:\home\diplom.com\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#17 Z:\home\diplom.com\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#18 Z:\home\diplom.com\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#19 Z:\home\diplom.com\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#20 Z:\home\diplom.com\www\framework\web\CController.php(291): CFilterChain->run()
+#21 Z:\home\diplom.com\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 Z:\home\diplom.com\www\framework\web\CWebApplication.php(282): CController->run('')
+#23 Z:\home\diplom.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('goods')
+#24 Z:\home\diplom.com\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#25 Z:\home\diplom.com\www\index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/index.php/goods
+HTTP_REFERER=http://www.diplom.com/index.php/work
+---

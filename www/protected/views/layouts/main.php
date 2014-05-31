@@ -28,7 +28,6 @@
         array(
             'class'=>'bootstrap.widgets.TbMenu',
             'items'=>array(
-                array('label'=>'Головна', 'url'=>array('/site/index')),
                 array('label'=>'Про нас', 'url'=>array('/site/page', 'view'=>'about')),
                 array('label'=>'Товари', 'url'=>array('/goods'), 'visible'=>!Yii::app()->user->isGuest, ),
                 array('label'=>'Послуги', 'url'=>array('/work'), 'visible'=>!Yii::app()->user->isGuest, ),

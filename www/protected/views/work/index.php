@@ -26,26 +26,29 @@ $('.search-form form').submit(function(){
 )); ?>
 </div><!-- search-form -->
 
-<?php $this->widget('zii.widgets.grid.CGridView', array(
-	'id'=>'work-grid',
-	'dataProvider'=>$model->search(),
-	'filter'=>$model,
-	'columns'=>array(
-		'id',
-		'article',
-		'name',
-		'text',
-		'pay',
-		'status' => array(
-            'name' => 'status',
-            'value' => '($data->status==1)?"Є на складі":"Немає на складі"',
-            'filter' => array(1=>"Є на складі", 0=>"Немає на складі"),
-        ),
-		//'data',
-		array(
-			'class'=>'CButtonColumn',
+<?php $this->widget('bootstrap.widgets.TbGridView', array(
+    'type'=>'striped bordered condensed',
+    'dataProvider'=>$model->search(),
+    'template'=>"{items}",
+    'filter'=>$model,
+    'id'=>'work-grid',
+    'columns'=>array(
+        array('name'=>'name', 'header'=>'назва',),
+        array('name'=>'article', 'header'=>'артикул'),
+        array('name'=>'data', 'header'=>'Дата','value' => 'date("j.m.Y H:h",$data->data)'),
+        array('name'=>'pay', 'header'=>'Ціна'),
+        array(
+        'name'=>'status', 
+        'header'=>'статус',
+        'value'=>'($data->status==1)?"Є на складі":"Немає на складі"'),
+        //'filter'=> array(1=>"Є на складі",0=>"Немає на складі"),
+        array(
+            'header'=>'перегляд',
+            'class'=>'bootstrap.widgets.TbButtonColumn',
+            'htmlOptions'=>array('style'=>'width: 50px'),
+            'htmlOptions'=>array('style'=>'text-align:center'),
             'updateButtonOptions' => array('style'=>'display:none'),
             'deleteButtonOptions' => array('style'=>'display:none')
-		),
-	),
+        ),
+    ),
 )); ?>

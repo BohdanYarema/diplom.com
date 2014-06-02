@@ -49,16 +49,29 @@ class User extends CActiveRecord
 			array('id, username, second_name, email, password, tellephone, adress, role', 'safe', 'on'=>'search'),
 		);
 	}
+    public function searchPosit($userid){
+    
+        $criteria = new CDbCriteria();
+        $criteria->select = "*";
+    
+        $criteria->with = array( 'client');
+        $criteria->params = array(':param' => $userid);
+        $criteria->condition = 'user_id=:param';
+        
+        $result=Buy::model()->findAll($criteria);
+        return $result;
+        
+        }
 
 	/**
 	 * @return array relational rules.
 	 */
 	public function relations()
 	{
-		// NOTE: you may need to adjust the relation name and the related
-		// class name for the relations automatically generated below.
+		
 		return array(
-		);
+		      'tobuy' => array(self::HAS_MANY, 'Buy', 'user_id'),
+        );
 	}
 
 	/**

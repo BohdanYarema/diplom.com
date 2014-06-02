@@ -4,8 +4,10 @@
 
 $this->menu=array(
 	array('label'=>'Змінити свої дані', 'url'=>array('update', 'id'=>$model->id)),
+    array('label'=>'Список замовлень', 'url'=>array('buy/select', 'id'=>$model->id)),
 );
 ?>
+
 
 <h1>Кабінет користувача <?php echo $model->username; ?></h1>
 
@@ -22,3 +24,8 @@ $this->menu=array(
 		//'role',
 	),
 )); ?>
+
+
+
+
+

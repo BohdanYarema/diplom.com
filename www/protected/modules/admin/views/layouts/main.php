@@ -33,7 +33,12 @@
                 array('label'=>'Користувачі', 'url'=>array('/admin/user')),
                 array('label'=>'Товари', 'url'=>array('/admin/goods')),
                 array('label'=>'Послуги', 'url'=>array('/admin/work')),
-				array('label'=>'Вийти ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
+				array('label'=>'Етапи робіт', 'url'=>array('/admin/step')),
+                array('label'=>'Замовлення на товар', 'url'=>array('/admin/buyGoods')),
+                array('label'=>'Замовлення послуг', 'url'=>array('/admin/buyWork')),
+                array('label'=>'Етапи виконання замовлення', 'url'=>array('/admin/buyStep')),
+                array('label'=>'Договора', 'url'=>array('/admin/contract')),
+                array('label'=>'Вийти ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 			),
 		)); ?>
 	</div><!-- mainmenu -->

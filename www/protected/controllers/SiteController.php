@@ -45,7 +45,7 @@ class SiteController extends Controller
 			$model->attributes=$_POST['User'];
 			if($model->save())
             Yii::app()->user->setFlash('Реєстрація','Дякуємо за реєстрацію!!!.');
-				//$this->redirect(array('view','id'=>$model->User_id));
+				$this->redirect(array('view','id'=>$model->User_id));
 		}
 
 		$this->render('registration',array(  

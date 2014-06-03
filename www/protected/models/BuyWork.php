@@ -51,10 +51,10 @@ class BuyWork extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'id' => 'ID',
-			'buy_id' => 'Buy',
-			'work_id' => 'Work',
-			'calc' => 'Calc',
+			'id' => 'Код',
+			'buy_id' => 'Код замовлення',
+			'work_id' => 'Код послуги',
+			'calc' => 'Кількість',
 		);
 	}
 

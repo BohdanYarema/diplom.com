@@ -51,10 +51,10 @@ class BuyGoods extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'id' => 'ID',
-			'buy_id' => 'Buy',
-			'goods_id' => 'Goods',
-			'calc' => 'Calc',
+			'id' => 'Код позиції',
+			'buy_id' => 'Код замовлення',
+			'goods_id' => 'Код товару',
+			'calc' => 'Кількість',
 		);
 	}
 

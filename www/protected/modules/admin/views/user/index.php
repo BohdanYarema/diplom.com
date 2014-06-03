@@ -27,21 +27,26 @@ $('.search-form form').submit(function(){
 )); ?>
 </div><!-- search-form -->
 
-<?php $this->widget('zii.widgets.grid.CGridView', array(
-	'id'=>'user-grid',
-	'dataProvider'=>$model->search(),
-	'filter'=>$model,
-	'columns'=>array(
-		'id',
-		'username',
-		//'second_name',
-		'email',
-		//'password',
-		//'tellephone',
-		//'adress',
-		//'role',
-		array(
-			'class'=>'CButtonColumn',
-		),
-	),
+
+
+<?php $this->widget('bootstrap.widgets.TbGridView', array(
+    'type'=>'striped bordered condensed',
+    'dataProvider'=>$model->search(),
+    'template'=>"{items}",
+    'filter'=>$model,
+    'id'=>'user-grid',
+    'columns'=>array(
+        array('name'=>'id', 'header'=>'Код',),
+        array('name'=>'username', 'header'=>'Логін'),
+        array('name'=>'second_name', 'header'=>'Прізвище'),
+        array('name'=>'email', 'header'=>'Електронна пошта'),
+        array(
+            'header'=>'перегляд',
+            'class'=>'bootstrap.widgets.TbButtonColumn',
+            'htmlOptions'=>array('style'=>'width: 50px'),
+            'htmlOptions'=>array('style'=>'text-align:center'),
+            //'updateButtonOptions' => array('style'=>'display:none'),
+            'deleteButtonOptions' => array('style'=>'display:none')
+        ),
+    ),
 )); ?>

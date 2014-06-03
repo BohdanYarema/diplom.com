@@ -50,9 +50,9 @@ class Step extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'id' => 'ID',
-			'name' => 'Name',
-			'text' => 'Text',
+			'id' => 'Код етапу',
+			'name' => 'Назва',
+			'text' => 'Опис',
 		);
 	}
 

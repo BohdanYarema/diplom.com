@@ -21,7 +21,15 @@ class Goods extends CActiveRecord
 	{
 		return '{{goods}}';
 	}
-
+     public static function all()
+	{
+	   $models = self::model()->findAll();
+       $array = array();
+       foreach($models as $data){
+            $array[$data->id]=$data->name;
+       }
+		return $array;
+	}
 	/**
 	 * @return array validation rules for model attributes.
 	 */

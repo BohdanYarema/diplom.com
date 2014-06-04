@@ -28,7 +28,7 @@ class BuyController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view','select'),
+				'actions'=>array('index','view','select','create'),
 				'roles'=>array('2'),
 			),
 			array('deny',  // deny all users

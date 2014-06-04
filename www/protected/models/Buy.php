@@ -102,8 +102,10 @@ class Buy extends CActiveRecord
 	}
     
     public function beforeSave()
-	{
+	{      
+	   //$id = User::model()->id;
         if($this->isNewRecord)
+            $this->user_id = Yii::app()->user->id;
             $this->data = time();
 		return parent::beforeSave();
 	}

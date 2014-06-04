@@ -53,7 +53,7 @@ class BuyGoods extends CActiveRecord
 		return array(
 			'id' => 'Код позиції',
 			'buy_id' => 'Код замовлення',
-			'goods_id' => 'Код товару',
+			'goods_id' => 'Виберіть товар',
 			'calc' => 'Кількість',
 		);
 	}

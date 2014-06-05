@@ -41,6 +41,7 @@ class Step extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+            //'works' => array(self::BELONGS_TO, 'Work', 'buy_id'),
 		);
 	}
 
@@ -55,6 +56,8 @@ class Step extends CActiveRecord
 			'text' => 'Опис',
 		);
 	}
+    
+    
 
 	/**
 	 * Retrieves a list of models based on the current search/filter conditions.

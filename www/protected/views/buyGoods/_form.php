@@ -22,6 +22,11 @@
     <?php echo CHtml::errorSummary(array($BuyGoods,$Buy)); ?>
  
         <!-- ...input fields for $a, $b... -->
+        <div class="row">
+            <?php echo $form->labelEx($BuyGoods,'goods_id'); ?>
+            <?php echo $form->dropDownList($BuyGoods,'goods_id',Goods::all()); ?>
+            <?php echo $form->error($BuyGoods,'goods_id'); ?>
+        </div>
      
         <div class="row">
             <?php echo $form->labelEx($BuyGoods,'calc'); ?>

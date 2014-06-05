@@ -136,7 +136,6 @@ class BuyController extends Controller
 	}
     
     
-    
     public function actionSelect($id)
 	{
 		$dataProvider = new CActiveDataProvider('Buy', array(

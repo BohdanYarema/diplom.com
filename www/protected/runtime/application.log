@@ -7861,3 +7861,748 @@ Stack trace:
 REQUEST_URI=/index.php/admin/buygoods/index
 HTTP_REFERER=http://www.diplom.com/index.php/user/view/1
 ---
+2014/06/04 20:06:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "admin/buygoods/index".' in Z:\home\diplom.com\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\diplom.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/buygoods/...')
+#1 Z:\home\diplom.com\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 Z:\home\diplom.com\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/admin/buygoods/index
+HTTP_REFERER=http://www.diplom.com/index.php/user/view/1
+---
+2014/06/04 20:34:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "admin/buyGoods".' in Z:\home\diplom.com\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\diplom.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/buyGoods')
+#1 Z:\home\diplom.com\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 Z:\home\diplom.com\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/admin/buyGoods
+HTTP_REFERER=http://www.diplom.com/index.php/admin
+---
+2014/06/04 20:50:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "admin/buyGoods".' in Z:\home\diplom.com\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\diplom.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/buyGoods')
+#1 Z:\home\diplom.com\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 Z:\home\diplom.com\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/admin/buyGoods
+HTTP_REFERER=http://www.diplom.com/index.php/admin
+---
+2014/06/04 20:52:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "admin/buyGoods".' in Z:\home\diplom.com\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\diplom.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/buyGoods')
+#1 Z:\home\diplom.com\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 Z:\home\diplom.com\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/admin/buyGoods
+HTTP_REFERER=http://www.diplom.com/index.php/admin/step
+---
+2014/06/04 21:40:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "buystep/select".' in Z:\home\diplom.com\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 Z:\home\diplom.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('buystep/select')
+#1 Z:\home\diplom.com\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 Z:\home\diplom.com\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/buystep/select
+HTTP_REFERER=http://www.diplom.com/index.php/buy/1
+---
+2014/06/04 21:41:29 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'У вас недостаточно прав для выполнения указанного действия.' in Z:\home\diplom.com\www\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 Z:\home\diplom.com\www\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), '?? ?????? ?????...')
+#1 Z:\home\diplom.com\www\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 Z:\home\diplom.com\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 Z:\home\diplom.com\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 Z:\home\diplom.com\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 Z:\home\diplom.com\www\framework\web\CController.php(291): CFilterChain->run()
+#6 Z:\home\diplom.com\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 Z:\home\diplom.com\www\framework\web\CWebApplication.php(282): CController->run('select')
+#8 Z:\home\diplom.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('step/select')
+#9 Z:\home\diplom.com\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 Z:\home\diplom.com\www\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php/step/select/1
+HTTP_REFERER=http://www.diplom.com/index.php/buy/1
+---
+2014/06/04 21:42:30 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "CWebApplication.buy".' in Z:\home\diplom.com\www\framework\base\CComponent.php:130
+Stack trace:
+#0 Z:\home\diplom.com\www\framework\base\CModule.php(105): CComponent->__get('buy')
+#1 Z:\home\diplom.com\www\protected\controllers\StepController.php(51): CModule->__get('buy')
+#2 [internal function]: StepController->actionSelect('1')
+#3 Z:\home\diplom.com\www\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(StepController), Array)
+#4 Z:\home\diplom.com\www\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(StepController), Object(ReflectionMethod), Array)
+#5 Z:\home\diplom.com\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 Z:\home\diplom.com\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 Z:\home\diplom.com\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 Z:\home\diplom.com\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 Z:\home\diplom.com\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 Z:\home\diplom.com\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 Z:\home\diplom.com\www\framework\web\CController.php(291): CFilterChain->run()
+#12 Z:\home\diplom.com\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 Z:\home\diplom.com\www\framework\web\CWebApplication.php(282): CController->run('select')
+#14 Z:\home\diplom.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('step/select')
+#15 Z:\home\diplom.com\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#16 Z:\home\diplom.com\www\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php/step/select/1
+HTTP_REFERER=http://www.diplom.com/index.php/buy/1
+---
+2014/06/04 21:46:03 [error] [exception.CDbException] exception 'CDbException' with message 'Отношение "client" не было определено в active record классе "Step".' in Z:\home\diplom.com\www\framework\db\ar\CActiveFinder.php:226
+Stack trace:
+#0 Z:\home\diplom.com\www\framework\db\ar\CActiveFinder.php(298): CActiveFinder->buildJoinTree(Object(CJoinElement), 'client', Array)
+#1 Z:\home\diplom.com\www\framework\db\ar\CActiveFinder.php(48): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 Z:\home\diplom.com\www\framework\db\ar\CActiveRecord.php(909): CActiveFinder->__construct(Object(Step), Array)
+#3 Z:\home\diplom.com\www\framework\db\ar\CActiveRecord.php(1604): CActiveRecord->getActiveFinder(Array)
+#4 Z:\home\diplom.com\www\framework\web\CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#5 Z:\home\diplom.com\www\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#6 Z:\home\diplom.com\www\framework\web\CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#7 Z:\home\diplom.com\www\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#8 Z:\home\diplom.com\www\framework\zii\widgets\CBaseListView.php(111): CDataProvider->getData()
+#9 Z:\home\diplom.com\www\framework\zii\widgets\CListView.php(211): CBaseListView->init()
+#10 Z:\home\diplom.com\www\framework\web\CBaseController.php(147): CListView->init()
+#11 Z:\home\diplom.com\www\framework\web\CBaseController.php(172): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#12 Z:\home\diplom.com\www\protected\views\step\index.php(20): CBaseController->widget('zii.widgets.CLi...', Array)
+#13 Z:\home\diplom.com\www\framework\web\CBaseController.php(126): require('Z:\home\diplom....')
+#14 Z:\home\diplom.com\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\diplom....', Array, true)
+#15 Z:\home\diplom.com\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\diplom....', Array, true)
+#16 Z:\home\diplom.com\www\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#17 Z:\home\diplom.com\www\protected\controllers\StepController.php(61): CController->render('index', Array)
+#18 [internal function]: StepController->actionSelect('1')
+#19 Z:\home\diplom.com\www\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(StepController), Array)
+#20 Z:\home\diplom.com\www\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(StepController), Object(ReflectionMethod), Array)
+#21 Z:\home\diplom.com\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#22 Z:\home\diplom.com\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#23 Z:\home\diplom.com\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#24 Z:\home\diplom.com\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#25 Z:\home\diplom.com\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#26 Z:\home\diplom.com\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#27 Z:\home\diplom.com\www\framework\web\CController.php(291): CFilterChain->run()
+#28 Z:\home\diplom.com\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#29 Z:\home\diplom.com\www\framework\web\CWebApplication.php(282): CController->run('select')
+#30 Z:\home\diplom.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('step/select')
+#31 Z:\home\diplom.com\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#32 Z:\home\diplom.com\www\index.php(13): CApplication->run()
+#33 {main}
+REQUEST_URI=/index.php/step/select/1
+HTTP_REFERER=http://www.diplom.com/index.php/buy/1
+---
+2014/06/04 21:46:49 [error] [exception.CDbException] exception 'CDbException' with message 'Отношение "works" AR модели "Step" определено с использованием неверного внешнего ключа "buy_id". В таблице "d_step" такого столбца не существует.' in Z:\home\diplom.com\www\framework\db\ar\CActiveFinder.php:1096
+Stack trace:
+#0 Z:\home\diplom.com\www\framework\db\ar\CActiveFinder.php(1067): CJoinElement->joinOneMany(Object(CJoinElement), Array, Object(CJoinElement), Object(CJoinElement))
+#1 Z:\home\diplom.com\www\framework\db\ar\CActiveFinder.php(1295): CJoinElement->getJoinCondition()
+#2 Z:\home\diplom.com\www\framework\db\ar\CActiveFinder.php(790): CJoinQuery->join(Object(CJoinElement))
+#3 Z:\home\diplom.com\www\framework\db\ar\CActiveFinder.php(728): CJoinElement->buildQuery(Object(CJoinQuery))
+#4 Z:\home\diplom.com\www\framework\db\ar\CActiveFinder.php(151): CJoinElement->count(Object(CDbCriteria))
+#5 Z:\home\diplom.com\www\framework\db\ar\CActiveRecord.php(1605): CActiveFinder->count(Object(CDbCriteria))
+#6 Z:\home\diplom.com\www\framework\web\CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#7 Z:\home\diplom.com\www\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#8 Z:\home\diplom.com\www\framework\web\CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#9 Z:\home\diplom.com\www\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#10 Z:\home\diplom.com\www\framework\zii\widgets\CBaseListView.php(111): CDataProvider->getData()
+#11 Z:\home\diplom.com\www\framework\zii\widgets\CListView.php(211): CBaseListView->init()
+#12 Z:\home\diplom.com\www\framework\web\CBaseController.php(147): CListView->init()
+#13 Z:\home\diplom.com\www\framework\web\CBaseController.php(172): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#14 Z:\home\diplom.com\www\protected\views\step\index.php(20): CBaseController->widget('zii.widgets.CLi...', Array)
+#15 Z:\home\diplom.com\www\framework\web\CBaseController.php(126): require('Z:\home\diplom....')
+#16 Z:\home\diplom.com\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\diplom....', Array, true)
+#17 Z:\home\diplom.com\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\diplom....', Array, true)
+#18 Z:\home\diplom.com\www\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#19 Z:\home\diplom.com\www\protected\controllers\StepController.php(61): CController->render('index', Array)
+#20 [internal function]: StepController->actionSelect('1')
+#21 Z:\home\diplom.com\www\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(StepController), Array)
+#22 Z:\home\diplom.com\www\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(StepController), Object(ReflectionMethod), Array)
+#23 Z:\home\diplom.com\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#24 Z:\home\diplom.com\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#25 Z:\home\diplom.com\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#26 Z:\home\diplom.com\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#27 Z:\home\diplom.com\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#28 Z:\home\diplom.com\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#29 Z:\home\diplom.com\www\framework\web\CController.php(291): CFilterChain->run()
+#30 Z:\home\diplom.com\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#31 Z:\home\diplom.com\www\framework\web\CWebApplication.php(282): CController->run('select')
+#32 Z:\home\diplom.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('step/select')
+#33 Z:\home\diplom.com\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#34 Z:\home\diplom.com\www\index.php(13): CApplication->run()
+#35 {main}
+REQUEST_URI=/index.php/step/select/1
+HTTP_REFERER=http://www.diplom.com/index.php/buy/1
+---
+2014/06/04 21:53:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "select".' in Z:\home\diplom.com\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\diplom.com\www\framework\web\CController.php(270): CController->missingAction('select')
+#1 Z:\home\diplom.com\www\framework\web\CWebApplication.php(282): CController->run('select')
+#2 Z:\home\diplom.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('step/select')
+#3 Z:\home\diplom.com\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 Z:\home\diplom.com\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/step/select/1
+HTTP_REFERER=http://www.diplom.com/index.php/buy/1
+---
+2014/06/04 21:54:17 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetchColumn(): SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'buy_id' in where clause is ambiguous. Выполнявшийся SQL-запрос: SELECT COUNT(DISTINCT `t`.`id`) FROM `d_buy_step` `t`  LEFT OUTER JOIN `d_buy_step` `works` ON (`t`.`buy_id`=`works`.`id`)  WHERE (buy_id = :buyId).
+in Z:\home\diplom.com\www\protected\extensions\bootstrap\widgets\TbGridView.php (49)
+in Z:\home\diplom.com\www\protected\views\buyStep\index.php (38)
+in Z:\home\diplom.com\www\protected\controllers\BuyStepController.php (60)
+2014/06/04 21:54:17 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'buy_id' in where clause is ambiguous. The SQL statement executed was: SELECT COUNT(DISTINCT `t`.`id`) FROM `d_buy_step` `t`  LEFT OUTER JOIN `d_buy_step` `works` ON (`t`.`buy_id`=`works`.`id`)  WHERE (buy_id = :buyId)' in Z:\home\diplom.com\www\framework\db\CDbCommand.php:543
+Stack trace:
+#0 Z:\home\diplom.com\www\framework\db\CDbCommand.php(433): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 Z:\home\diplom.com\www\framework\db\ar\CActiveFinder.php(759): CDbCommand->queryScalar()
+#2 Z:\home\diplom.com\www\framework\db\ar\CActiveFinder.php(151): CJoinElement->count(Object(CDbCriteria))
+#3 Z:\home\diplom.com\www\framework\db\ar\CActiveRecord.php(1605): CActiveFinder->count(Object(CDbCriteria))
+#4 Z:\home\diplom.com\www\framework\web\CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#5 Z:\home\diplom.com\www\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#6 Z:\home\diplom.com\www\framework\web\CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#7 Z:\home\diplom.com\www\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#8 Z:\home\diplom.com\www\framework\zii\widgets\CBaseListView.php(111): CDataProvider->getData()
+#9 Z:\home\diplom.com\www\framework\zii\widgets\grid\CGridView.php(339): CBaseListView->init()
+#10 Z:\home\diplom.com\www\protected\extensions\bootstrap\widgets\TbGridView.php(49): CGridView->init()
+#11 Z:\home\diplom.com\www\framework\web\CBaseController.php(147): TbGridView->init()
+#12 Z:\home\diplom.com\www\framework\web\CBaseController.php(172): CBaseController->createWidget('bootstrap.widge...', Array)
+#13 Z:\home\diplom.com\www\protected\views\buyStep\index.php(38): CBaseController->widget('bootstrap.widge...', Array)
+#14 Z:\home\diplom.com\www\framework\web\CBaseController.php(126): require('Z:\home\diplom....')
+#15 Z:\home\diplom.com\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\diplom....', Array, true)
+#16 Z:\home\diplom.com\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\diplom....', Array, true)
+#17 Z:\home\diplom.com\www\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#18 Z:\home\diplom.com\www\protected\controllers\BuyStepController.php(60): CController->render('index', Array)
+#19 [internal function]: BuyStepController->actionSelect('1')
+#20 Z:\home\diplom.com\www\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(BuyStepController), Array)
+#21 Z:\home\diplom.com\www\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(BuyStepController), Object(ReflectionMethod), Array)
+#22 Z:\home\diplom.com\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#23 Z:\home\diplom.com\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#24 Z:\home\diplom.com\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#25 Z:\home\diplom.com\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#26 Z:\home\diplom.com\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#27 Z:\home\diplom.com\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#28 Z:\home\diplom.com\www\framework\web\CController.php(291): CFilterChain->run()
+#29 Z:\home\diplom.com\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#30 Z:\home\diplom.com\www\framework\web\CWebApplication.php(282): CController->run('select')
+#31 Z:\home\diplom.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('buystep/select')
+#32 Z:\home\diplom.com\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#33 Z:\home\diplom.com\www\index.php(13): CApplication->run()
+#34 {main}
+REQUEST_URI=/index.php/buystep/select/1
+HTTP_REFERER=http://www.diplom.com/index.php/buy/1
+---
+2014/06/04 21:59:30 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'У вас недостаточно прав для выполнения указанного действия.' in Z:\home\diplom.com\www\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 Z:\home\diplom.com\www\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), '?? ?????? ?????...')
+#1 Z:\home\diplom.com\www\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 Z:\home\diplom.com\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 Z:\home\diplom.com\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 Z:\home\diplom.com\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 Z:\home\diplom.com\www\framework\web\CController.php(291): CFilterChain->run()
+#6 Z:\home\diplom.com\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 Z:\home\diplom.com\www\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 Z:\home\diplom.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('buystep/admin')
+#9 Z:\home\diplom.com\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 Z:\home\diplom.com\www\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php/buystep/admin
+HTTP_REFERER=http://www.diplom.com/index.php/buystep/select/3
+---
+2014/06/04 22:00:32 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "CWebApplication.buy".' in Z:\home\diplom.com\www\framework\base\CComponent.php:130
+Stack trace:
+#0 Z:\home\diplom.com\www\framework\base\CModule.php(105): CComponent->__get('buy')
+#1 Z:\home\diplom.com\www\protected\controllers\BuyStepController.php(50): CModule->__get('buy')
+#2 [internal function]: BuyStepController->actionSelect('1')
+#3 Z:\home\diplom.com\www\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(BuyStepController), Array)
+#4 Z:\home\diplom.com\www\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(BuyStepController), Object(ReflectionMethod), Array)
+#5 Z:\home\diplom.com\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 Z:\home\diplom.com\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 Z:\home\diplom.com\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 Z:\home\diplom.com\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 Z:\home\diplom.com\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 Z:\home\diplom.com\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 Z:\home\diplom.com\www\framework\web\CController.php(291): CFilterChain->run()
+#12 Z:\home\diplom.com\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 Z:\home\diplom.com\www\framework\web\CWebApplication.php(282): CController->run('select')
+#14 Z:\home\diplom.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('buystep/select')
+#15 Z:\home\diplom.com\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#16 Z:\home\diplom.com\www\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php/buystep/select/1
+HTTP_REFERER=http://www.diplom.com/index.php/buy/1
+---
+2014/06/04 22:03:41 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Некорректный запрос.' in Z:\home\diplom.com\www\framework\web\CController.php:336
+Stack trace:
+#0 Z:\home\diplom.com\www\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 Z:\home\diplom.com\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 Z:\home\diplom.com\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 Z:\home\diplom.com\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 Z:\home\diplom.com\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 Z:\home\diplom.com\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 Z:\home\diplom.com\www\framework\web\CController.php(291): CFilterChain->run()
+#7 Z:\home\diplom.com\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 Z:\home\diplom.com\www\framework\web\CWebApplication.php(282): CController->run('select')
+#9 Z:\home\diplom.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('buystep/select')
+#10 Z:\home\diplom.com\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 Z:\home\diplom.com\www\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/index.php/buystep/select?0=
+HTTP_REFERER=http://www.diplom.com/index.php/buy/1
+---
+2014/06/04 22:03:56 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Некорректный запрос.' in Z:\home\diplom.com\www\framework\web\CController.php:336
+Stack trace:
+#0 Z:\home\diplom.com\www\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 Z:\home\diplom.com\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 Z:\home\diplom.com\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 Z:\home\diplom.com\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 Z:\home\diplom.com\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 Z:\home\diplom.com\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 Z:\home\diplom.com\www\framework\web\CController.php(291): CFilterChain->run()
+#7 Z:\home\diplom.com\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 Z:\home\diplom.com\www\framework\web\CWebApplication.php(282): CController->run('select')
+#9 Z:\home\diplom.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('buystep/select')
+#10 Z:\home\diplom.com\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 Z:\home\diplom.com\www\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/index.php/buystep/select?0=
+HTTP_REFERER=http://www.diplom.com/index.php/buy/1
+---
+2014/06/04 22:09:02 [error] [exception.CDbException] exception 'CDbException' with message 'Отношение "tostep" не было определено в active record классе "BuyStep".' in Z:\home\diplom.com\www\framework\db\ar\CActiveFinder.php:226
+Stack trace:
+#0 Z:\home\diplom.com\www\framework\db\ar\CActiveFinder.php(298): CActiveFinder->buildJoinTree(Object(CJoinElement), 'tostep', Array)
+#1 Z:\home\diplom.com\www\framework\db\ar\CActiveFinder.php(48): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 Z:\home\diplom.com\www\framework\db\ar\CActiveRecord.php(909): CActiveFinder->__construct(Object(BuyStep), Array)
+#3 Z:\home\diplom.com\www\framework\db\ar\CActiveRecord.php(1604): CActiveRecord->getActiveFinder(Array)
+#4 Z:\home\diplom.com\www\framework\web\CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#5 Z:\home\diplom.com\www\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#6 Z:\home\diplom.com\www\framework\web\CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#7 Z:\home\diplom.com\www\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#8 Z:\home\diplom.com\www\framework\zii\widgets\CBaseListView.php(111): CDataProvider->getData()
+#9 Z:\home\diplom.com\www\framework\zii\widgets\grid\CGridView.php(339): CBaseListView->init()
+#10 Z:\home\diplom.com\www\protected\extensions\bootstrap\widgets\TbGridView.php(49): CGridView->init()
+#11 Z:\home\diplom.com\www\framework\web\CBaseController.php(147): TbGridView->init()
+#12 Z:\home\diplom.com\www\framework\web\CBaseController.php(172): CBaseController->createWidget('bootstrap.widge...', Array)
+#13 Z:\home\diplom.com\www\protected\views\buyStep\index.php(36): CBaseController->widget('bootstrap.widge...', Array)
+#14 Z:\home\diplom.com\www\framework\web\CBaseController.php(126): require('Z:\home\diplom....')
+#15 Z:\home\diplom.com\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\diplom....', Array, true)
+#16 Z:\home\diplom.com\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\diplom....', Array, true)
+#17 Z:\home\diplom.com\www\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#18 Z:\home\diplom.com\www\protected\controllers\BuyStepController.php(60): CController->render('index', Array)
+#19 [internal function]: BuyStepController->actionSelect('1')
+#20 Z:\home\diplom.com\www\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(BuyStepController), Array)
+#21 Z:\home\diplom.com\www\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(BuyStepController), Object(ReflectionMethod), Array)
+#22 Z:\home\diplom.com\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#23 Z:\home\diplom.com\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#24 Z:\home\diplom.com\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#25 Z:\home\diplom.com\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#26 Z:\home\diplom.com\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#27 Z:\home\diplom.com\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#28 Z:\home\diplom.com\www\framework\web\CController.php(291): CFilterChain->run()
+#29 Z:\home\diplom.com\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#30 Z:\home\diplom.com\www\framework\web\CWebApplication.php(282): CController->run('select')
+#31 Z:\home\diplom.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('buystep/select')
+#32 Z:\home\diplom.com\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#33 Z:\home\diplom.com\www\index.php(13): CApplication->run()
+#34 {main}
+REQUEST_URI=/index.php/buystep/select/1
+HTTP_REFERER=http://www.diplom.com/index.php/buy/1
+---
+2014/06/04 22:12:33 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "CWebApplication.buy".' in Z:\home\diplom.com\www\framework\base\CComponent.php:130
+Stack trace:
+#0 Z:\home\diplom.com\www\framework\base\CModule.php(105): CComponent->__get('buy')
+#1 Z:\home\diplom.com\www\protected\controllers\BuyStepController.php(50): CModule->__get('buy')
+#2 [internal function]: BuyStepController->actionSelect('1')
+#3 Z:\home\diplom.com\www\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(BuyStepController), Array)
+#4 Z:\home\diplom.com\www\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(BuyStepController), Object(ReflectionMethod), Array)
+#5 Z:\home\diplom.com\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 Z:\home\diplom.com\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 Z:\home\diplom.com\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 Z:\home\diplom.com\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 Z:\home\diplom.com\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 Z:\home\diplom.com\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 Z:\home\diplom.com\www\framework\web\CController.php(291): CFilterChain->run()
+#12 Z:\home\diplom.com\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 Z:\home\diplom.com\www\framework\web\CWebApplication.php(282): CController->run('select')
+#14 Z:\home\diplom.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('buystep/select')
+#15 Z:\home\diplom.com\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#16 Z:\home\diplom.com\www\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php/buystep/select/1
+HTTP_REFERER=http://www.diplom.com/index.php/buy/1
+---
+2014/06/04 22:22:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "select".' in Z:\home\diplom.com\www\framework\web\CController.php:483
+Stack trace:
+#0 Z:\home\diplom.com\www\framework\web\CController.php(270): CController->missingAction('select')
+#1 Z:\home\diplom.com\www\framework\web\CWebApplication.php(282): CController->run('select')
+#2 Z:\home\diplom.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('buystep/select')
+#3 Z:\home\diplom.com\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 Z:\home\diplom.com\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/buystep/select/1
+HTTP_REFERER=http://www.diplom.com/index.php/buy/1
+---
+2014/06/04 22:24:46 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "CWebApplication.buy".' in Z:\home\diplom.com\www\framework\base\CComponent.php:130
+Stack trace:
+#0 Z:\home\diplom.com\www\framework\base\CModule.php(105): CComponent->__get('buy')
+#1 Z:\home\diplom.com\www\protected\controllers\BuyStepController.php(50): CModule->__get('buy')
+#2 [internal function]: BuyStepController->actionSelect('1')
+#3 Z:\home\diplom.com\www\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(BuyStepController), Array)
+#4 Z:\home\diplom.com\www\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(BuyStepController), Object(ReflectionMethod), Array)
+#5 Z:\home\diplom.com\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 Z:\home\diplom.com\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 Z:\home\diplom.com\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 Z:\home\diplom.com\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 Z:\home\diplom.com\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 Z:\home\diplom.com\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 Z:\home\diplom.com\www\framework\web\CController.php(291): CFilterChain->run()
+#12 Z:\home\diplom.com\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 Z:\home\diplom.com\www\framework\web\CWebApplication.php(282): CController->run('select')
+#14 Z:\home\diplom.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('buystep/select')
+#15 Z:\home\diplom.com\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#16 Z:\home\diplom.com\www\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php/buystep/select/1
+HTTP_REFERER=http://www.diplom.com/index.php/buy/1
+---
+2014/06/04 22:25:43 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "CWebApplication.buy".' in Z:\home\diplom.com\www\framework\base\CComponent.php:130
+Stack trace:
+#0 Z:\home\diplom.com\www\framework\base\CModule.php(105): CComponent->__get('buy')
+#1 Z:\home\diplom.com\www\protected\controllers\BuyStepController.php(50): CModule->__get('buy')
+#2 [internal function]: BuyStepController->actionSelect('1')
+#3 Z:\home\diplom.com\www\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(BuyStepController), Array)
+#4 Z:\home\diplom.com\www\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(BuyStepController), Object(ReflectionMethod), Array)
+#5 Z:\home\diplom.com\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 Z:\home\diplom.com\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 Z:\home\diplom.com\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 Z:\home\diplom.com\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 Z:\home\diplom.com\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 Z:\home\diplom.com\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 Z:\home\diplom.com\www\framework\web\CController.php(291): CFilterChain->run()
+#12 Z:\home\diplom.com\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 Z:\home\diplom.com\www\framework\web\CWebApplication.php(282): CController->run('select')
+#14 Z:\home\diplom.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('buystep/select')
+#15 Z:\home\diplom.com\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#16 Z:\home\diplom.com\www\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php/buystep/select/1
+HTTP_REFERER=http://www.diplom.com/index.php/buy/1
+---
+2014/06/04 22:26:08 [error] [php] include(1.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (Z:\home\diplom.com\www\framework\YiiBase.php:427)
+Stack trace:
+#0 Z:\home\diplom.com\www\framework\db\ar\CActiveRecord.php(395): spl_autoload_call()
+#1 Z:\home\diplom.com\www\protected\models\Buy.php(121): model()
+#2 Z:\home\diplom.com\www\protected\controllers\BuyStepController.php(50): model()
+#3 unknown(0): BuyStepController->actionSelect()
+#4 Z:\home\diplom.com\www\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#5 Z:\home\diplom.com\www\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 Z:\home\diplom.com\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 Z:\home\diplom.com\www\framework\web\filters\CFilterChain.php(133): BuyStepController->runAction()
+#8 Z:\home\diplom.com\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 Z:\home\diplom.com\www\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#10 Z:\home\diplom.com\www\framework\web\filters\CInlineFilter.php(58): BuyStepController->filterAccessControl()
+#11 Z:\home\diplom.com\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#12 Z:\home\diplom.com\www\framework\web\CController.php(291): CFilterChain->run()
+#13 Z:\home\diplom.com\www\framework\web\CController.php(265): BuyStepController->runActionWithFilters()
+#14 Z:\home\diplom.com\www\framework\web\CWebApplication.php(282): BuyStepController->run()
+#15 Z:\home\diplom.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 Z:\home\diplom.com\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 Z:\home\diplom.com\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/buystep/select/1
+in Z:\home\diplom.com\www\protected\models\Buy.php (121)
+in Z:\home\diplom.com\www\protected\controllers\BuyStepController.php (50)
+in Z:\home\diplom.com\www\index.php (13)
+2014/06/04 22:26:31 [error] [php] include(StepBuy.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (Z:\home\diplom.com\www\framework\YiiBase.php:427)
+Stack trace:
+#0 Z:\home\diplom.com\www\framework\db\ar\CActiveRecord.php(395): spl_autoload_call()
+#1 Z:\home\diplom.com\www\framework\web\CActiveDataProvider.php(165): model()
+#2 Z:\home\diplom.com\www\framework\web\CActiveDataProvider.php(87): CActiveDataProvider->getModel()
+#3 Z:\home\diplom.com\www\protected\controllers\BuyStepController.php(57): CActiveDataProvider->__construct()
+#4 unknown(0): BuyStepController->actionSelect()
+#5 Z:\home\diplom.com\www\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#6 Z:\home\diplom.com\www\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#7 Z:\home\diplom.com\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 Z:\home\diplom.com\www\framework\web\filters\CFilterChain.php(133): BuyStepController->runAction()
+#9 Z:\home\diplom.com\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 Z:\home\diplom.com\www\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#11 Z:\home\diplom.com\www\framework\web\filters\CInlineFilter.php(58): BuyStepController->filterAccessControl()
+#12 Z:\home\diplom.com\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#13 Z:\home\diplom.com\www\framework\web\CController.php(291): CFilterChain->run()
+#14 Z:\home\diplom.com\www\framework\web\CController.php(265): BuyStepController->runActionWithFilters()
+#15 Z:\home\diplom.com\www\framework\web\CWebApplication.php(282): BuyStepController->run()
+#16 Z:\home\diplom.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#17 Z:\home\diplom.com\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 Z:\home\diplom.com\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/buystep/select/1
+in Z:\home\diplom.com\www\protected\controllers\BuyStepController.php (57)
+in Z:\home\diplom.com\www\index.php (13)
+2014/06/04 22:27:10 [error] [php] include(StepBuy.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (Z:\home\diplom.com\www\framework\YiiBase.php:427)
+Stack trace:
+#0 Z:\home\diplom.com\www\framework\db\ar\CActiveRecord.php(395): spl_autoload_call()
+#1 Z:\home\diplom.com\www\framework\web\CActiveDataProvider.php(165): model()
+#2 Z:\home\diplom.com\www\framework\web\CActiveDataProvider.php(87): CActiveDataProvider->getModel()
+#3 Z:\home\diplom.com\www\protected\controllers\BuyStepController.php(57): CActiveDataProvider->__construct()
+#4 unknown(0): BuyStepController->actionSelect()
+#5 Z:\home\diplom.com\www\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#6 Z:\home\diplom.com\www\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#7 Z:\home\diplom.com\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 Z:\home\diplom.com\www\framework\web\filters\CFilterChain.php(133): BuyStepController->runAction()
+#9 Z:\home\diplom.com\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 Z:\home\diplom.com\www\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#11 Z:\home\diplom.com\www\framework\web\filters\CInlineFilter.php(58): BuyStepController->filterAccessControl()
+#12 Z:\home\diplom.com\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#13 Z:\home\diplom.com\www\framework\web\CController.php(291): CFilterChain->run()
+#14 Z:\home\diplom.com\www\framework\web\CController.php(265): BuyStepController->runActionWithFilters()
+#15 Z:\home\diplom.com\www\framework\web\CWebApplication.php(282): BuyStepController->run()
+#16 Z:\home\diplom.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#17 Z:\home\diplom.com\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 Z:\home\diplom.com\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/buystep/select/1
+in Z:\home\diplom.com\www\protected\controllers\BuyStepController.php (57)
+in Z:\home\diplom.com\www\index.php (13)
+2014/06/04 22:27:59 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetchAll(): SQLSTATE[42S02]: Base table or view not found: 1146 Table 'diplom.steps_buys' doesn't exist. Выполнявшийся SQL-запрос: SHOW FULL COLUMNS FROM `steps_buys`.
+in Z:\home\diplom.com\www\protected\extensions\bootstrap\widgets\TbGridView.php (49)
+in Z:\home\diplom.com\www\protected\views\buyStep\index.php (36)
+in Z:\home\diplom.com\www\protected\controllers\BuyStepController.php (60)
+2014/06/04 22:27:59 [error] [exception.CDbException] exception 'CDbException' with message 'Отношение "buys", определенное в записи active record класса "BuyStep" ошибочно: в базе данных нет включаемой таблицы "steps_buys", упомянутой во внешнем ключе.' in Z:\home\diplom.com\www\framework\db\ar\CActiveFinder.php:1034
+Stack trace:
+#0 Z:\home\diplom.com\www\framework\db\ar\CActiveFinder.php(1295): CJoinElement->getJoinCondition()
+#1 Z:\home\diplom.com\www\framework\db\ar\CActiveFinder.php(790): CJoinQuery->join(Object(CJoinElement))
+#2 Z:\home\diplom.com\www\framework\db\ar\CActiveFinder.php(728): CJoinElement->buildQuery(Object(CJoinQuery))
+#3 Z:\home\diplom.com\www\framework\db\ar\CActiveFinder.php(151): CJoinElement->count(Object(CDbCriteria))
+#4 Z:\home\diplom.com\www\framework\db\ar\CActiveRecord.php(1605): CActiveFinder->count(Object(CDbCriteria))
+#5 Z:\home\diplom.com\www\framework\web\CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#6 Z:\home\diplom.com\www\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#7 Z:\home\diplom.com\www\framework\web\CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#8 Z:\home\diplom.com\www\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#9 Z:\home\diplom.com\www\framework\zii\widgets\CBaseListView.php(111): CDataProvider->getData()
+#10 Z:\home\diplom.com\www\framework\zii\widgets\grid\CGridView.php(339): CBaseListView->init()
+#11 Z:\home\diplom.com\www\protected\extensions\bootstrap\widgets\TbGridView.php(49): CGridView->init()
+#12 Z:\home\diplom.com\www\framework\web\CBaseController.php(147): TbGridView->init()
+#13 Z:\home\diplom.com\www\framework\web\CBaseController.php(172): CBaseController->createWidget('bootstrap.widge...', Array)
+#14 Z:\home\diplom.com\www\protected\views\buyStep\index.php(36): CBaseController->widget('bootstrap.widge...', Array)
+#15 Z:\home\diplom.com\www\framework\web\CBaseController.php(126): require('Z:\home\diplom....')
+#16 Z:\home\diplom.com\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\diplom....', Array, true)
+#17 Z:\home\diplom.com\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\diplom....', Array, true)
+#18 Z:\home\diplom.com\www\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#19 Z:\home\diplom.com\www\protected\controllers\BuyStepController.php(60): CController->render('index', Array)
+#20 [internal function]: BuyStepController->actionSelect('1')
+#21 Z:\home\diplom.com\www\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(BuyStepController), Array)
+#22 Z:\home\diplom.com\www\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(BuyStepController), Object(ReflectionMethod), Array)
+#23 Z:\home\diplom.com\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#24 Z:\home\diplom.com\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#25 Z:\home\diplom.com\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#26 Z:\home\diplom.com\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#27 Z:\home\diplom.com\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#28 Z:\home\diplom.com\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#29 Z:\home\diplom.com\www\framework\web\CController.php(291): CFilterChain->run()
+#30 Z:\home\diplom.com\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#31 Z:\home\diplom.com\www\framework\web\CWebApplication.php(282): CController->run('select')
+#32 Z:\home\diplom.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('buystep/select')
+#33 Z:\home\diplom.com\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#34 Z:\home\diplom.com\www\index.php(13): CApplication->run()
+#35 {main}
+REQUEST_URI=/index.php/buystep/select/1
+HTTP_REFERER=http://www.diplom.com/index.php/buy/1
+---
+2014/06/04 22:28:45 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetchAll(): SQLSTATE[42S02]: Base table or view not found: 1146 Table 'diplom.buy_step' doesn't exist. Выполнявшийся SQL-запрос: SHOW FULL COLUMNS FROM `buy_step`.
+in Z:\home\diplom.com\www\protected\extensions\bootstrap\widgets\TbGridView.php (49)
+in Z:\home\diplom.com\www\protected\views\buyStep\index.php (36)
+in Z:\home\diplom.com\www\protected\controllers\BuyStepController.php (60)
+2014/06/04 22:28:45 [error] [exception.CDbException] exception 'CDbException' with message 'Отношение "buys", определенное в записи active record класса "BuyStep" ошибочно: в базе данных нет включаемой таблицы "buy_step", упомянутой во внешнем ключе.' in Z:\home\diplom.com\www\framework\db\ar\CActiveFinder.php:1034
+Stack trace:
+#0 Z:\home\diplom.com\www\framework\db\ar\CActiveFinder.php(1295): CJoinElement->getJoinCondition()
+#1 Z:\home\diplom.com\www\framework\db\ar\CActiveFinder.php(790): CJoinQuery->join(Object(CJoinElement))
+#2 Z:\home\diplom.com\www\framework\db\ar\CActiveFinder.php(728): CJoinElement->buildQuery(Object(CJoinQuery))
+#3 Z:\home\diplom.com\www\framework\db\ar\CActiveFinder.php(151): CJoinElement->count(Object(CDbCriteria))
+#4 Z:\home\diplom.com\www\framework\db\ar\CActiveRecord.php(1605): CActiveFinder->count(Object(CDbCriteria))
+#5 Z:\home\diplom.com\www\framework\web\CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#6 Z:\home\diplom.com\www\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#7 Z:\home\diplom.com\www\framework\web\CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#8 Z:\home\diplom.com\www\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#9 Z:\home\diplom.com\www\framework\zii\widgets\CBaseListView.php(111): CDataProvider->getData()
+#10 Z:\home\diplom.com\www\framework\zii\widgets\grid\CGridView.php(339): CBaseListView->init()
+#11 Z:\home\diplom.com\www\protected\extensions\bootstrap\widgets\TbGridView.php(49): CGridView->init()
+#12 Z:\home\diplom.com\www\framework\web\CBaseController.php(147): TbGridView->init()
+#13 Z:\home\diplom.com\www\framework\web\CBaseController.php(172): CBaseController->createWidget('bootstrap.widge...', Array)
+#14 Z:\home\diplom.com\www\protected\views\buyStep\index.php(36): CBaseController->widget('bootstrap.widge...', Array)
+#15 Z:\home\diplom.com\www\framework\web\CBaseController.php(126): require('Z:\home\diplom....')
+#16 Z:\home\diplom.com\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\diplom....', Array, true)
+#17 Z:\home\diplom.com\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\diplom....', Array, true)
+#18 Z:\home\diplom.com\www\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#19 Z:\home\diplom.com\www\protected\controllers\BuyStepController.php(60): CController->render('index', Array)
+#20 [internal function]: BuyStepController->actionSelect('1')
+#21 Z:\home\diplom.com\www\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(BuyStepController), Array)
+#22 Z:\home\diplom.com\www\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(BuyStepController), Object(ReflectionMethod), Array)
+#23 Z:\home\diplom.com\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#24 Z:\home\diplom.com\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#25 Z:\home\diplom.com\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#26 Z:\home\diplom.com\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#27 Z:\home\diplom.com\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#28 Z:\home\diplom.com\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#29 Z:\home\diplom.com\www\framework\web\CController.php(291): CFilterChain->run()
+#30 Z:\home\diplom.com\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#31 Z:\home\diplom.com\www\framework\web\CWebApplication.php(282): CController->run('select')
+#32 Z:\home\diplom.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('buystep/select')
+#33 Z:\home\diplom.com\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#34 Z:\home\diplom.com\www\index.php(13): CApplication->run()
+#35 {main}
+REQUEST_URI=/index.php/buystep/select/1
+HTTP_REFERER=http://www.diplom.com/index.php/buy/1
+---
+2014/06/04 22:29:20 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetchColumn(): SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'buy_id' in where clause is ambiguous. Выполнявшийся SQL-запрос: SELECT COUNT(DISTINCT `t`.`id`) FROM `d_buy_step` `t`  LEFT OUTER JOIN `d_buy_step` `buys_buys` ON (`t`.`id`=`buys_buys`.`buy_id`) LEFT OUTER JOIN `d_buy` `buys` ON (`buys`.`id`=`buys_buys`.`step_id`)  WHERE (buy_id = :buyId).
+in Z:\home\diplom.com\www\protected\extensions\bootstrap\widgets\TbGridView.php (49)
+in Z:\home\diplom.com\www\protected\views\buyStep\index.php (36)
+in Z:\home\diplom.com\www\protected\controllers\BuyStepController.php (60)
+2014/06/04 22:29:20 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'buy_id' in where clause is ambiguous. The SQL statement executed was: SELECT COUNT(DISTINCT `t`.`id`) FROM `d_buy_step` `t`  LEFT OUTER JOIN `d_buy_step` `buys_buys` ON (`t`.`id`=`buys_buys`.`buy_id`) LEFT OUTER JOIN `d_buy` `buys` ON (`buys`.`id`=`buys_buys`.`step_id`)  WHERE (buy_id = :buyId)' in Z:\home\diplom.com\www\framework\db\CDbCommand.php:543
+Stack trace:
+#0 Z:\home\diplom.com\www\framework\db\CDbCommand.php(433): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 Z:\home\diplom.com\www\framework\db\ar\CActiveFinder.php(759): CDbCommand->queryScalar()
+#2 Z:\home\diplom.com\www\framework\db\ar\CActiveFinder.php(151): CJoinElement->count(Object(CDbCriteria))
+#3 Z:\home\diplom.com\www\framework\db\ar\CActiveRecord.php(1605): CActiveFinder->count(Object(CDbCriteria))
+#4 Z:\home\diplom.com\www\framework\web\CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#5 Z:\home\diplom.com\www\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#6 Z:\home\diplom.com\www\framework\web\CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#7 Z:\home\diplom.com\www\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#8 Z:\home\diplom.com\www\framework\zii\widgets\CBaseListView.php(111): CDataProvider->getData()
+#9 Z:\home\diplom.com\www\framework\zii\widgets\grid\CGridView.php(339): CBaseListView->init()
+#10 Z:\home\diplom.com\www\protected\extensions\bootstrap\widgets\TbGridView.php(49): CGridView->init()
+#11 Z:\home\diplom.com\www\framework\web\CBaseController.php(147): TbGridView->init()
+#12 Z:\home\diplom.com\www\framework\web\CBaseController.php(172): CBaseController->createWidget('bootstrap.widge...', Array)
+#13 Z:\home\diplom.com\www\protected\views\buyStep\index.php(36): CBaseController->widget('bootstrap.widge...', Array)
+#14 Z:\home\diplom.com\www\framework\web\CBaseController.php(126): require('Z:\home\diplom....')
+#15 Z:\home\diplom.com\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\diplom....', Array, true)
+#16 Z:\home\diplom.com\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\diplom....', Array, true)
+#17 Z:\home\diplom.com\www\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#18 Z:\home\diplom.com\www\protected\controllers\BuyStepController.php(60): CController->render('index', Array)
+#19 [internal function]: BuyStepController->actionSelect('1')
+#20 Z:\home\diplom.com\www\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(BuyStepController), Array)
+#21 Z:\home\diplom.com\www\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(BuyStepController), Object(ReflectionMethod), Array)
+#22 Z:\home\diplom.com\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#23 Z:\home\diplom.com\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#24 Z:\home\diplom.com\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#25 Z:\home\diplom.com\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#26 Z:\home\diplom.com\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#27 Z:\home\diplom.com\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#28 Z:\home\diplom.com\www\framework\web\CController.php(291): CFilterChain->run()
+#29 Z:\home\diplom.com\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#30 Z:\home\diplom.com\www\framework\web\CWebApplication.php(282): CController->run('select')
+#31 Z:\home\diplom.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('buystep/select')
+#32 Z:\home\diplom.com\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#33 Z:\home\diplom.com\www\index.php(13): CApplication->run()
+#34 {main}
+REQUEST_URI=/index.php/buystep/select/1
+HTTP_REFERER=http://www.diplom.com/index.php/buy/1
+---
+2014/06/04 22:30:40 [error] [exception.CDbException] exception 'CDbException' with message 'Отношение "steps" не было определено в active record классе "BuyStep".' in Z:\home\diplom.com\www\framework\db\ar\CActiveFinder.php:226
+Stack trace:
+#0 Z:\home\diplom.com\www\framework\db\ar\CActiveFinder.php(298): CActiveFinder->buildJoinTree(Object(CJoinElement), 'steps', Array)
+#1 Z:\home\diplom.com\www\framework\db\ar\CActiveFinder.php(48): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 Z:\home\diplom.com\www\framework\db\ar\CActiveRecord.php(909): CActiveFinder->__construct(Object(BuyStep), Array)
+#3 Z:\home\diplom.com\www\framework\db\ar\CActiveRecord.php(1604): CActiveRecord->getActiveFinder(Array)
+#4 Z:\home\diplom.com\www\framework\web\CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#5 Z:\home\diplom.com\www\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#6 Z:\home\diplom.com\www\framework\web\CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#7 Z:\home\diplom.com\www\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#8 Z:\home\diplom.com\www\framework\zii\widgets\CBaseListView.php(111): CDataProvider->getData()
+#9 Z:\home\diplom.com\www\framework\zii\widgets\grid\CGridView.php(339): CBaseListView->init()
+#10 Z:\home\diplom.com\www\protected\extensions\bootstrap\widgets\TbGridView.php(49): CGridView->init()
+#11 Z:\home\diplom.com\www\framework\web\CBaseController.php(147): TbGridView->init()
+#12 Z:\home\diplom.com\www\framework\web\CBaseController.php(172): CBaseController->createWidget('bootstrap.widge...', Array)
+#13 Z:\home\diplom.com\www\protected\views\buyStep\index.php(36): CBaseController->widget('bootstrap.widge...', Array)
+#14 Z:\home\diplom.com\www\framework\web\CBaseController.php(126): require('Z:\home\diplom....')
+#15 Z:\home\diplom.com\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\diplom....', Array, true)
+#16 Z:\home\diplom.com\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\diplom....', Array, true)
+#17 Z:\home\diplom.com\www\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#18 Z:\home\diplom.com\www\protected\controllers\BuyStepController.php(60): CController->render('index', Array)
+#19 [internal function]: BuyStepController->actionSelect('1')
+#20 Z:\home\diplom.com\www\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(BuyStepController), Array)
+#21 Z:\home\diplom.com\www\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(BuyStepController), Object(ReflectionMethod), Array)
+#22 Z:\home\diplom.com\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#23 Z:\home\diplom.com\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#24 Z:\home\diplom.com\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#25 Z:\home\diplom.com\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#26 Z:\home\diplom.com\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#27 Z:\home\diplom.com\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#28 Z:\home\diplom.com\www\framework\web\CController.php(291): CFilterChain->run()
+#29 Z:\home\diplom.com\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#30 Z:\home\diplom.com\www\framework\web\CWebApplication.php(282): CController->run('select')
+#31 Z:\home\diplom.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('buystep/select')
+#32 Z:\home\diplom.com\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#33 Z:\home\diplom.com\www\index.php(13): CApplication->run()
+#34 {main}
+REQUEST_URI=/index.php/buystep/select/1
+HTTP_REFERER=http://www.diplom.com/index.php/buy/1
+---
+2014/06/04 22:31:11 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetchColumn(): SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'buy_id' in where clause is ambiguous. Выполнявшийся SQL-запрос: SELECT COUNT(DISTINCT `t`.`id`) FROM `d_buy_step` `t`  LEFT OUTER JOIN `d_buy_step` `buys_buys` ON (`t`.`id`=`buys_buys`.`buy_id`) LEFT OUTER JOIN `d_buy` `buys` ON (`buys`.`id`=`buys_buys`.`step_id`)  WHERE (buy_id = :buyId).
+in Z:\home\diplom.com\www\protected\extensions\bootstrap\widgets\TbGridView.php (49)
+in Z:\home\diplom.com\www\protected\views\buyStep\index.php (36)
+in Z:\home\diplom.com\www\protected\controllers\BuyStepController.php (60)
+2014/06/04 22:31:11 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'buy_id' in where clause is ambiguous. The SQL statement executed was: SELECT COUNT(DISTINCT `t`.`id`) FROM `d_buy_step` `t`  LEFT OUTER JOIN `d_buy_step` `buys_buys` ON (`t`.`id`=`buys_buys`.`buy_id`) LEFT OUTER JOIN `d_buy` `buys` ON (`buys`.`id`=`buys_buys`.`step_id`)  WHERE (buy_id = :buyId)' in Z:\home\diplom.com\www\framework\db\CDbCommand.php:543
+Stack trace:
+#0 Z:\home\diplom.com\www\framework\db\CDbCommand.php(433): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 Z:\home\diplom.com\www\framework\db\ar\CActiveFinder.php(759): CDbCommand->queryScalar()
+#2 Z:\home\diplom.com\www\framework\db\ar\CActiveFinder.php(151): CJoinElement->count(Object(CDbCriteria))
+#3 Z:\home\diplom.com\www\framework\db\ar\CActiveRecord.php(1605): CActiveFinder->count(Object(CDbCriteria))
+#4 Z:\home\diplom.com\www\framework\web\CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#5 Z:\home\diplom.com\www\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#6 Z:\home\diplom.com\www\framework\web\CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#7 Z:\home\diplom.com\www\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#8 Z:\home\diplom.com\www\framework\zii\widgets\CBaseListView.php(111): CDataProvider->getData()
+#9 Z:\home\diplom.com\www\framework\zii\widgets\grid\CGridView.php(339): CBaseListView->init()
+#10 Z:\home\diplom.com\www\protected\extensions\bootstrap\widgets\TbGridView.php(49): CGridView->init()
+#11 Z:\home\diplom.com\www\framework\web\CBaseController.php(147): TbGridView->init()
+#12 Z:\home\diplom.com\www\framework\web\CBaseController.php(172): CBaseController->createWidget('bootstrap.widge...', Array)
+#13 Z:\home\diplom.com\www\protected\views\buyStep\index.php(36): CBaseController->widget('bootstrap.widge...', Array)
+#14 Z:\home\diplom.com\www\framework\web\CBaseController.php(126): require('Z:\home\diplom....')
+#15 Z:\home\diplom.com\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\home\diplom....', Array, true)
+#16 Z:\home\diplom.com\www\framework\web\CController.php(869): CBaseController->renderFile('Z:\home\diplom....', Array, true)
+#17 Z:\home\diplom.com\www\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#18 Z:\home\diplom.com\www\protected\controllers\BuyStepController.php(60): CController->render('index', Array)
+#19 [internal function]: BuyStepController->actionSelect('1')
+#20 Z:\home\diplom.com\www\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(BuyStepController), Array)
+#21 Z:\home\diplom.com\www\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(BuyStepController), Object(ReflectionMethod), Array)
+#22 Z:\home\diplom.com\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#23 Z:\home\diplom.com\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#24 Z:\home\diplom.com\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#25 Z:\home\diplom.com\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#26 Z:\home\diplom.com\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#27 Z:\home\diplom.com\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#28 Z:\home\diplom.com\www\framework\web\CController.php(291): CFilterChain->run()
+#29 Z:\home\diplom.com\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#30 Z:\home\diplom.com\www\framework\web\CWebApplication.php(282): CController->run('select')
+#31 Z:\home\diplom.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('buystep/select')
+#32 Z:\home\diplom.com\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#33 Z:\home\diplom.com\www\index.php(13): CApplication->run()
+#34 {main}
+REQUEST_URI=/index.php/buystep/select/1
+HTTP_REFERER=http://www.diplom.com/index.php/buy/1
+---
+2014/06/04 22:36:40 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "CWebApplication.buy".' in Z:\home\diplom.com\www\framework\base\CComponent.php:130
+Stack trace:
+#0 Z:\home\diplom.com\www\framework\base\CModule.php(105): CComponent->__get('buy')
+#1 Z:\home\diplom.com\www\protected\controllers\BuyStepController.php(50): CModule->__get('buy')
+#2 [internal function]: BuyStepController->actionSelect('1')
+#3 Z:\home\diplom.com\www\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(BuyStepController), Array)
+#4 Z:\home\diplom.com\www\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(BuyStepController), Object(ReflectionMethod), Array)
+#5 Z:\home\diplom.com\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 Z:\home\diplom.com\www\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 Z:\home\diplom.com\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 Z:\home\diplom.com\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 Z:\home\diplom.com\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 Z:\home\diplom.com\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 Z:\home\diplom.com\www\framework\web\CController.php(291): CFilterChain->run()
+#12 Z:\home\diplom.com\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 Z:\home\diplom.com\www\framework\web\CWebApplication.php(282): CController->run('select')
+#14 Z:\home\diplom.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('buystep/select')
+#15 Z:\home\diplom.com\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#16 Z:\home\diplom.com\www\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php/buystep/select/1
+HTTP_REFERER=http://www.diplom.com/index.php/buy/1
+---
+2014/06/04 22:38:54 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'У вас недостаточно прав для выполнения указанного действия.' in Z:\home\diplom.com\www\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 Z:\home\diplom.com\www\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), '?? ?????? ?????...')
+#1 Z:\home\diplom.com\www\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 Z:\home\diplom.com\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 Z:\home\diplom.com\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 Z:\home\diplom.com\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 Z:\home\diplom.com\www\framework\web\CController.php(291): CFilterChain->run()
+#6 Z:\home\diplom.com\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 Z:\home\diplom.com\www\framework\web\CWebApplication.php(282): CController->run('')
+#8 Z:\home\diplom.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('buystep')
+#9 Z:\home\diplom.com\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 Z:\home\diplom.com\www\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php/buystep
+---

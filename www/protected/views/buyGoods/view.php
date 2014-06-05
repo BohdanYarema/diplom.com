@@ -11,7 +11,6 @@ $this->menu=array(
 	array('label'=>'List BuyGoods', 'url'=>array('index')),
 	array('label'=>'Create BuyGoods', 'url'=>array('create')),
 	array('label'=>'Update BuyGoods', 'url'=>array('update', 'id'=>$model->id)),
-	array('label'=>'Delete BuyGoods', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
 	array('label'=>'Manage BuyGoods', 'url'=>array('admin')),
 );
 ?>

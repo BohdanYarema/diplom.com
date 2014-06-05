@@ -46,6 +46,7 @@ class BuyStep extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+            'buys' => array(self::BELONGS_TO, 'Buy', 'buy_id'),
 		);
 	}
 
@@ -55,12 +56,12 @@ class BuyStep extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'id' => 'Код',
-			'data_b' => 'Дата початку',
-			'data_e' => 'Дата кінця',
-			'commnet' => 'Коментар',
-			'buy_id' => 'Код замовлення',
-			'step_id' => 'Код етапу',
+			'id' => 'ID',
+			'data_b' => 'Data B',
+			'data_e' => 'Data E',
+			'commnet' => 'Commnet',
+			'buy_id' => 'Buy',
+			'step_id' => 'Step',
 		);
 	}
 

@@ -43,6 +43,7 @@ class Buy extends CActiveRecord
 	{
 		return array(
             'client' => array(self::BELONGS_TO, 'User', 'user_id'),
+            'steps' => array(self::HAS_MANY, 'BuyStep', 'buy_id'),
 		);
 	}
 

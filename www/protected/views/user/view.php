@@ -5,7 +5,8 @@
 $this->menu=array(
 	array('label'=>'Змінити свої дані', 'url'=>array('update', 'id'=>$model->id)),
     array('label'=>'Список замовлень', 'url'=>array('buy/select', 'id'=>$model->id)),
-    array('label'=>'Зробити замовлення', 'url'=>array('admin/buygoods/index')),
+    array('label'=>'Замовити товар', 'url'=>array('buygoods/create')),
+    array('label'=>'Замовити послугу', 'url'=>array('buywork/create')),
 );
 ?>
 

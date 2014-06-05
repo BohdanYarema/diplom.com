@@ -25,6 +25,19 @@ class Work extends CActiveRecord
 	/**
 	 * @return array validation rules for model attributes.
 	 */
+     
+     
+     public static function all()
+	{
+	   $models = self::model()->findAll();
+       $array = array();
+       foreach($models as $data){
+            $array[$data->id]=$data->name;
+       }
+		return $array;
+	}
+     
+     
 	public function rules()
 	{
 		// NOTE: you should only define rules for those attributes that

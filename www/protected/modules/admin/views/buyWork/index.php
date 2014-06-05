@@ -2,9 +2,6 @@
 /* @var $this BuyWorkController */
 /* @var $model BuyWork */
 
-$this->menu=array(
-	array('label'=>'Додати замовлення', 'url'=>array('create')),
-);
 
 Yii::app()->clientScript->registerScript('search', "
 $('.search-button').click(function(){
@@ -20,10 +17,9 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Журнал замовлень на послуги</h1>
+<h1>Журнал заказів послуг</h1>
 
-
-<?php echo CHtml::link('Advanced Search','#',array('class'=>'search-button')); ?>
+<?php echo CHtml::link('Розширений пошук','#',array('class'=>'search-button')); ?>
 <div class="search-form" style="display:none">
 <?php $this->renderPartial('_search',array(
 	'model'=>$model,

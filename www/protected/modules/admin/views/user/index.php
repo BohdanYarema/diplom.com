@@ -46,7 +46,7 @@ $('.search-form form').submit(function(){
             'htmlOptions'=>array('style'=>'width: 50px'),
             'htmlOptions'=>array('style'=>'text-align:center'),
             //'updateButtonOptions' => array('style'=>'display:none'),
-            'deleteButtonOptions' => array('style'=>'display:none')
+            //'deleteButtonOptions' => array('style'=>'display:none')
         ),
     ),
 )); ?>

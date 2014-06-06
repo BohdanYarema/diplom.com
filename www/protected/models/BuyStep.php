@@ -47,6 +47,7 @@ class BuyStep extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
             'buys' => array(self::BELONGS_TO, 'Buy', 'buy_id'),
+            'nameStep'=>array(self::BELONGS_TO, 'Step', 'step_id'),
 		);
 	}
 

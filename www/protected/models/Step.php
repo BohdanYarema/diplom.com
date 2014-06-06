@@ -57,6 +57,15 @@ class Step extends CActiveRecord
 		);
 	}
     
+    public static function all()
+	{
+	   $models = self::model()->findAll();
+       $array = array();
+       foreach($models as $data){
+            $array[$data->id]=$data->name;
+       }
+		return $array;
+	}
     
 
 	/**

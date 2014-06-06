@@ -45,7 +45,7 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'step_id'); ?>
-		<?php echo $form->textField($model,'step_id'); ?>
+		<?php echo $form->dropDownList($Step,'step_id',Step::all()); ?>
 		<?php echo $form->error($model,'step_id'); ?>
 	</div>
 

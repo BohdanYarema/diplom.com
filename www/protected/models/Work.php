@@ -47,7 +47,8 @@ class Work extends CActiveRecord
             array('name', 'unique'),
 			array('id, status, data', 'numerical', 'integerOnly'=>true),
 			array('pay', 'numerical'),
-			array('article, name, text', 'length', 'max'=>255),
+            array('text', 'length', 'max'=>4096),
+			array('article, name', 'length', 'max'=>255),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('id, article, name, text, pay, status, data', 'safe', 'on'=>'search'),

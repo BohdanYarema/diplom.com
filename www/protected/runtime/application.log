@@ -8606,3 +8606,71 @@ Stack trace:
 #11 {main}
 REQUEST_URI=/index.php/buystep
 ---
+2014/06/06 01:09:28 [warning] [application] Не удалось присвоить небезопасный атрибут "text" класса "Work".
+in Z:\home\diplom.com\www\protected\modules\admin\controllers\WorkController.php (64)
+in Z:\home\diplom.com\www\index.php (13)
+2014/06/06 01:09:47 [warning] [application] Не удалось присвоить небезопасный атрибут "text" класса "Work".
+in Z:\home\diplom.com\www\protected\modules\admin\controllers\WorkController.php (88)
+in Z:\home\diplom.com\www\index.php (13)
+2014/06/06 01:12:22 [error] [php] include(text.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (Z:\home\diplom.com\www\framework\YiiBase.php:427)
+Stack trace:
+#0 Z:\home\diplom.com\www\framework\validators\CValidator.php(186): import()
+#1 Z:\home\diplom.com\www\framework\base\CModel.php(287): createValidator()
+#2 Z:\home\diplom.com\www\framework\base\CModel.php(260): Work->createValidators()
+#3 Z:\home\diplom.com\www\framework\base\CModel.php(547): Work->getValidators()
+#4 Z:\home\diplom.com\www\framework\base\CModel.php(468): Work->getSafeAttributeNames()
+#5 Z:\home\diplom.com\www\framework\base\CComponent.php(152): Work->setAttributes()
+#6 Z:\home\diplom.com\www\framework\db\ar\CActiveRecord.php(161): Work->__set()
+#7 Z:\home\diplom.com\www\protected\modules\admin\controllers\WorkController.php(88): Work->__set()
+#8 unknown(0): WorkController->actionUpdate()
+#9 Z:\home\diplom.com\www\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#10 Z:\home\diplom.com\www\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#11 Z:\home\diplom.com\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#12 Z:\home\diplom.com\www\framework\web\filters\CFilterChain.php(133): WorkController->runAction()
+#13 Z:\home\diplom.com\www\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#14 Z:\home\diplom.com\www\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#15 Z:\home\diplom.com\www\framework\web\filters\CInlineFilter.php(58): WorkController->filterAccessControl()
+#16 Z:\home\diplom.com\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#17 Z:\home\diplom.com\www\framework\web\CController.php(291): CFilterChain->run()
+#18 Z:\home\diplom.com\www\framework\web\CController.php(265): WorkController->runActionWithFilters()
+#19 Z:\home\diplom.com\www\framework\web\CWebApplication.php(282): WorkController->run()
+#20 Z:\home\diplom.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#21 Z:\home\diplom.com\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#22 Z:\home\diplom.com\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/admin/work/update/id/3
+in Z:\home\diplom.com\www\protected\modules\admin\controllers\WorkController.php (88)
+in Z:\home\diplom.com\www\index.php (13)
+2014/06/06 01:49:54 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'У вас недостаточно прав для выполнения указанного действия.' in Z:\home\diplom.com\www\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 Z:\home\diplom.com\www\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), '?? ?????? ?????...')
+#1 Z:\home\diplom.com\www\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 Z:\home\diplom.com\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 Z:\home\diplom.com\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 Z:\home\diplom.com\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 Z:\home\diplom.com\www\framework\web\CController.php(291): CFilterChain->run()
+#6 Z:\home\diplom.com\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 Z:\home\diplom.com\www\framework\web\CWebApplication.php(282): CController->run('index')
+#8 Z:\home\diplom.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('buystep/index')
+#9 Z:\home\diplom.com\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 Z:\home\diplom.com\www\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php/buystep/index
+HTTP_REFERER=http://www.diplom.com/index.php/buystep/update/1
+---
+2014/06/06 03:26:17 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'У вас недостаточно прав для выполнения указанного действия.' in Z:\home\diplom.com\www\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 Z:\home\diplom.com\www\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), '?? ?????? ?????...')
+#1 Z:\home\diplom.com\www\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 Z:\home\diplom.com\www\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 Z:\home\diplom.com\www\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 Z:\home\diplom.com\www\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 Z:\home\diplom.com\www\framework\web\CController.php(291): CFilterChain->run()
+#6 Z:\home\diplom.com\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 Z:\home\diplom.com\www\framework\web\CWebApplication.php(282): CController->run('create')
+#8 Z:\home\diplom.com\www\framework\web\CWebApplication.php(141): CWebApplication->runController('buystep/create')
+#9 Z:\home\diplom.com\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 Z:\home\diplom.com\www\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php/buystep/create
+HTTP_REFERER=http://www.diplom.com/index.php/buystep/select/1
+---

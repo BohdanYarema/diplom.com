@@ -19,8 +19,8 @@ $this->menu=array(
 	),
 )); ?>
 
-<h1 style="text-align: center;">
+<p style="text-align: center;">
 <?php $this->beginWidget('CHtmlPurifier'); ?>
     <?php echo $model->text; ?>
 <?php $this->endWidget(); ?>
-</h1>
+</p>

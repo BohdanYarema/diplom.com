@@ -5,11 +5,13 @@
  *
  * The followings are the available columns in table '{{buy_step}}':
  * @property integer $id
- * @property string $data_b
- * @property string $data_e
+ * @property string $data_b_f
+ * @property string $data_e_f
  * @property string $commnet
  * @property integer $buy_id
  * @property integer $step_id
+ * @property string $data_b_p
+ * @property string $data_e_p
  */
 class BuyStep extends CActiveRecord
 {
@@ -31,10 +33,10 @@ class BuyStep extends CActiveRecord
 		return array(
 			array('buy_id, step_id', 'numerical', 'integerOnly'=>true),
 			array('commnet', 'length', 'max'=>255),
-			array('data_b, data_e', 'safe'),
+			array('data_b_f, data_e_f, data_b_p, data_e_p', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, data_b, data_e, commnet, buy_id, step_id', 'safe', 'on'=>'search'),
+			array('id, data_b_f, data_e_f, commnet, buy_id, step_id, data_b_p, data_e_p', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -47,7 +49,7 @@ class BuyStep extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
             'buys' => array(self::BELONGS_TO, 'Buy', 'buy_id'),
-            'nameStep'=>array(self::BELONGS_TO, 'Step', 'step_id'),
+            'nameStep' => array(self::BELONGS_TO, 'Step', 'step_id'),
 		);
 	}
 
@@ -58,8 +60,10 @@ class BuyStep extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'data_b' => 'Data B',
-			'data_e' => 'Data E',
+			'data_b_f' => 'Фактична дата початку',
+			'data_e_f' => 'Фактична дата закінчення',
+			'data_b_p' => 'Планова дата початку',
+			'data_e_p' => 'Планова дата закінчення',
 			'commnet' => 'Commnet',
 			'buy_id' => 'Buy',
 			'step_id' => 'Step',
@@ -85,11 +89,13 @@ class BuyStep extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
-		$criteria->compare('data_b',$this->data_b,true);
-		$criteria->compare('data_e',$this->data_e,true);
+		$criteria->compare('data_b_f',$this->data_b_f,true);
+		$criteria->compare('data_e_f',$this->data_e_f,true);
 		$criteria->compare('commnet',$this->commnet,true);
 		$criteria->compare('buy_id',$this->buy_id);
 		$criteria->compare('step_id',$this->step_id);
+		$criteria->compare('data_b_p',$this->data_b_p,true);
+		$criteria->compare('data_e_p',$this->data_e_p,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

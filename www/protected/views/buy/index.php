@@ -1,12 +1,8 @@
 <?php
 /* @var $this BuyController */
 /* @var $dataProvider CActiveDataProvider */
-
-
-$this->menu=array(
-	//array('label'=>'Статус виконання', 'url'=>array('#')),
-);
 ?>
+
 
 <h1>Замовлення</h1>
 
@@ -14,21 +10,35 @@ $this->menu=array(
     'type'=>'striped bordered condensed',
     'dataProvider'=>$dataProvider,
     'template'=>"{items}",
-    'filter'=>$model,
-    'id'=>'goods-grid',
+    //'filter'=>$model,
+    'id'=>'buy-grid',
     'columns'=>array(
-        array('name'=>'id', 'header'=>'Код',),
+        //array('name'=>'id', 'header'=>'Код',),
         array('name'=>'number', 'header'=>'Номер замовлення'),
-        array('name'=>'text', 'header'=>'Опис замовлення'),
+        array('name'=>'text', 'header'=>'Контактні дані'),
         array('name'=>'data', 'header'=>'Дата','value' => 'date("j.m.Y H:h",$data->data)'),
-        array('name'=>'user_id', 'header'=>'Код користувача'),
         array(
-            'header'=>'перегляд',
+            'name'=>'client',
+            'header'=>'Замовник',
+            'value'=>'$data->client->username'),
+        array(
             'class'=>'bootstrap.widgets.TbButtonColumn',
-            'htmlOptions'=>array('style'=>'width: 50px'),
-            'htmlOptions'=>array('style'=>'text-align:center'),
-            'updateButtonOptions' => array('style'=>'display:none'),
-            'deleteButtonOptions' => array('style'=>'display:none')
+            'template'=>'{list}',
+            'buttons'=>array
+            (
+                'list' => array
+                (
+                    'icon'=>'list white',
+                    'url'=>'Yii::app()->createUrl("buystep/select", array("id"=>$data->id))',
+                    'options'=>array(
+                        'class'=>'btn btn-small btn-info',
+                    ),
+                ),
+            'htmlOptions'=>array(
+                'style'=>'width: 220px',
+            ),
         ),
     ),
-)); ?>
+))); 
+
+?>

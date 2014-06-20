@@ -20,15 +20,26 @@
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'data_b'); ?>
-		<?php echo $form->textField($model,'data_b'); ?>
-		<?php echo $form->error($model,'data_b'); ?>
+		<?php echo $form->labelEx($model,'data_b_f'); ?>
+		<?php echo $form->textField($model,'data_b_f'); ?>
+		<?php echo $form->error($model,'data_b_f'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'data_e'); ?>
-		<?php echo $form->textField($model,'data_e'); ?>
-		<?php echo $form->error($model,'data_e'); ?>
+		<?php echo $form->labelEx($model,'data_e_f'); ?>
+		<?php echo $form->textField($model,'data_e_f'); ?>
+		<?php echo $form->error($model,'data_e_f'); ?>
+	</div>
+    <div class="row">
+		<?php echo $form->labelEx($model,'data_b_p'); ?>
+		<?php echo $form->textField($model,'data_b_p'); ?>
+		<?php echo $form->error($model,'data_b_p'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'data_e_p'); ?>
+		<?php echo $form->textField($model,'data_e_p'); ?>
+		<?php echo $form->error($model,'data_e_p'); ?>
 	</div>
 
 	<div class="row">

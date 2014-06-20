@@ -154,6 +154,25 @@ class BuyController extends Controller
 			'dataProvider'=>$dataProvider,
 		));
 	}
+    
+    public function actionSelectbuy()
+	{
+		$dataProvider = new CActiveDataProvider('Buy', array(
+            'criteria' => array(
+                'with' => array('client' => array(
+                    'condition' => 'user_id = :userId',
+                    'params' => array(':userId' => Yii::app()->user->id),
+                    'together' => true,
+                )),
+            ),
+            'pagination' => array(
+                'pageSize' => 10,
+            ),
+        ));
+        $this->render('index',array(
+			'dataProvider'=>$dataProvider,
+		));
+	}
 
 	/**
 	 * Returns the data model based on the primary key given in the GET variable.

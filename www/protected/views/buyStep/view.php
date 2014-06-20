@@ -22,8 +22,10 @@ $this->menu=array(
 	'data'=>$model,
 	'attributes'=>array(
 		'id',
-		'data_b',
-		'data_e',
+		'data_b_f',
+		'data_e_f',
+        'data_b_p',
+		'data_e_p',
 		'commnet',
 		'buy_id',
 		'step_id',

@@ -56,7 +56,7 @@ class Buy extends CActiveRecord
 		return array(
 			'id' => 'ID',
 			'number' => 'Номер замовлення',
-			'text' => 'Опис замовлення',
+			'text' => 'Конаткні дані',
 			'data' => 'Дата',
 			'user_id' => 'Код користувача',
 		);

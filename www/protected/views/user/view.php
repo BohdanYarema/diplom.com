@@ -13,18 +13,17 @@ $this->menu=array(
 
 <h1>Кабінет користувача <?php echo $model->username; ?></h1>
 
-<?php $this->widget('zii.widgets.CDetailView', array(
-	'data'=>$model,
-	'attributes'=>array(
-		//'id',
-		'username',
-		'second_name',
-		'email',
-		//'password',
-		'tellephone',
-		'adress',
-		//'role',
-	),
+
+
+<?php $this->widget('bootstrap.widgets.TbDetailView', array(
+    'data'=>$model,
+    'attributes'=>array(
+        array('name'=>'username', 'label'=>'Ім\'я'),
+        array('name'=>'second_name', 'label'=>'Прізвище'),
+        array('name'=>'email', 'label'=>'Електронна пошта'),
+        array('name'=>'tellephone', 'label'=>'Телефон'),
+        array('name'=>'adress', 'label'=>'Адреса'),
+    ),
 )); ?>
 
 

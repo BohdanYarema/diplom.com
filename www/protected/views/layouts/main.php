@@ -29,9 +29,15 @@
             'class'=>'bootstrap.widgets.TbMenu',
             'items'=>array(
                 array('label'=>'Про нас', 'url'=>array('/site/page', 'view'=>'about')),
-                array('label'=>'Товари', 'url'=>array('/goods'), 'visible'=>!Yii::app()->user->isGuest, ),
-                array('label'=>'Послуги', 'url'=>array('/work'), 'visible'=>!Yii::app()->user->isGuest, ),
+                array('label' => 'Наші послуги', 'items' => array(
+                    array('label'=>'Товари', 'url'=>array('/goods'), 'visible'=>!Yii::app()->user->isGuest, ),
+                    array('label'=>'Послуги', 'url'=>array('/work'), 'visible'=>!Yii::app()->user->isGuest, ),
+                )),
                 array('label'=>'Контактна форма', 'url'=>array('/site/contact')),
+                array('label' => 'Статистика', 'items' => array(
+                    array('label'=>'Виконані проекти', 'url'=>array('/Selectbuy')),
+                    array('label'=>'Критичні проекти', 'url'=>array('/Selectbuy')),
+                )),
                 array('label'=>'Особистий кабінет', 'url'=>array('/user/view/'.Yii::app()->user->id), 'visible'=>!Yii::app()->user->isGuest, ),
                 array('label'=>'Адмін панель', 'url'=>array('/admin'), 'visible'=>!Yii::app()->user->isGuest, ),
                 array('label'=>'Реєстрація', 'url'=>array('/site/Registration'), 'visible'=>Yii::app()->user->isGuest),

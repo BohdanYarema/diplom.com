@@ -40,7 +40,7 @@ $('.search-form form').submit(function(){
         array(
         'name'=>'status', 
         'header'=>'статус',
-        'value'=>'($data->status==1)?"Є на складі":"Немає на складі"'),
+        'value'=>'($data->status==1)?"Актуально":"Не актуально"'),
         //'filter'=> array(1=>"Є на складі",0=>"Немає на складі"),
         array(
             'header'=>'перегляд',
